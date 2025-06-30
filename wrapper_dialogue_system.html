@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crabs Serializer System</title>
+</head>
+<body>
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Using Dialogue System from C++</h2>
+        <p class="alltext ptext">
+            To use the Crabs Dialogue System in C++, simply inherit from the <code>DialogueSystemCPP</code> class and register your custom subclass as a global object. This global instance will manage dialogue flow across your game.
+        </p>
+
+        <h3 class="alltext h3text">Initialization</h3>
+        <ul class="alltext list">
+            <li>In your overridden class, call <code>setupCPP(root_path, locale)</code> from the <code>_ready()</code> method.</li>
+            <li>This prepares the system to locate and parse dialogue files from the provided root path and for the selected locale.</li>
+        </ul>
+
+        <h3 class="alltext h3text">Loading Dialogues</h3>
+        <p class="alltext ptext">
+            You can load dialogue files either synchronously or asynchronously:
+        </p>
+        <ul class="alltext list">
+            <li><code>loadDialogues(path)</code> – Synchronous loading.</li>
+            <li><code>loadDialoguesAsync(path)</code> – Asynchronous loading. Note: Godot does not support returning C++ futures, so you must poll.</li>
+        </ul>
+        <p class="alltext ptext">
+            For asynchronous loading, use <code>isStackLoadedCPP(path)</code> to check when loading is complete.
+        </p>
+
+        <h3 class="alltext h3text">Creating Dialogue Instances</h3>
+        <p class="alltext ptext">
+            Once dialogues are loaded, you can create a new instance using:
+        </p>
+        <pre class="codeblock">makeInstanceCPP(dialogue_path, dialogue_name)</pre>
+        <p class="alltext ptext">
+            This returns a <code>RefCounted</code> object of type <code>DialogueCPP</code>, which represents a running dialogue instance.
+        </p>
+
+        <h3 class="alltext h3text">Interacting with the Dialogue</h3>
+        <p class="alltext ptext">
+            To step through the dialogue, call <code>getNextCPP()</code> on your <code>DialogueCPP</code> instance. This returns a dictionary with the following structure:
+        </p>
+        <pre class="codeblock">
+    {
+        "type": "S" | "L" | "X",     // "Say", "Listen", or "End"
+        "person": "Speaker name",    // Name of the speaker/listener
+        "options": ["..."]           // Array of dialogue strings/options
+    }
+        </pre>
+        <p class="alltext ptext">
+            Keep calling <code>getNextCPP()</code> to advance through the dialogue.
+        </p>
+
+        <h3 class="alltext h3text">Providing Input</h3>
+        <p class="alltext ptext">
+            When the dialogue expects user input (typically after a <code>"L"</code> type step), you can provide it by calling:
+        </p>
+        <pre class="codeblock">inputCPP(String)</pre>
+        <p class="alltext ptext">
+            This method sends the player's response to the <code>DialogueCPP</code> instance, advancing the flow based on the selected option.
+        </p>
+    </div>
+  <script src="top-panel-movement.js"></script>
+  <script src="load-top-panel.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

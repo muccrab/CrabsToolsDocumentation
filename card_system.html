@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Crabs Card System</title>
+</head>
+<body>
+  <div id="top-panel-placeholder"></div>
+
+  <div class="bodycontent">
+    <h2 class="alltext h2text">Crabs Card System</h2>
+    <p class="alltext ptext">
+      The Crabs Card System is built around the <strong>BattleField</strong> class, the central engine driving card battles in the game. 
+    </p>
+
+    <h3 class="alltext h2text">Battle Setup</h3>
+    <ul class="alltext list">
+      <li><strong>Actors:</strong> Two instances of <code>IActor</code> are passed in to represent the participants.</li>
+      <li><strong>Field Size:</strong> Determines how many “dumps” (zones) are present.</li>
+      <li><strong>Random Engine:</strong> Pointer to a shared random object that must persist through the match.</li>
+    </ul>
+    <p class="alltext ptext">
+      To start the battle, just call <code>runBattleSerial</code> for single-threaded play, or <code>runBattleParallel</code> to play in another thread.
+    </p>
+
+    <h3 class="alltext h2text">Actors and AI</h3>
+    <p class="alltext ptext">
+      <code>IActor</code> is the interface every participant must implement. IActor has:
+    </p>
+    <ul class="alltext list">
+      <li>A <strong>deck</strong></li>
+      <li><strong>Health</strong></li>
+      <li>A <strong>pure virtual method</strong> <code>playNext()</code> which is called by the battlefield</li>
+    </ul>
+    <p class="alltext ptext">
+      The <strong>RandomActor</strong> is a basic AI that plays randomly. It will throw out cards until it can't. 
+      <br><br>
+      The <strong>PlayerActor</strong> is more involved. It uses <code>IPlayerNotifier</code> to notify the player when the system awaits an input. Once the player provides an action via <code>makeMove()</code>, the thread continues execution. 
+      This design allows the game to wait without blocking, making it ideal for real-time or async gameplay.
+    </p>
+
+    <h3 class="alltext h2text">Card Components</h3>
+    <p class="alltext ptext">
+      Cards are completely component-based, meaning a blank card does nothing. But once you slap a component on, it's game time.
+    </p>
+    <ul class="alltext list">
+      <li><code>SameRankCardCMP</code> - Prevents other cards of a different rank from being placed on it while in an attacking state.</li>
+      <li><code>MultiplierCard</code> - Increases its power when another card of the same rank is placed on it.</li>
+    </ul>
+    <p class="alltext ptext">
+      This modular approach means you can extend or mutate game rules however you want by simply defining new components.
+    </p>
+
+    <h3 class="alltext h2text">Ruleset</h3>
+    <p class="alltext ptext">
+      For full details on how this card system works, check out the <a href="card_system_rules.html">PERSI ruleset</a> page.
+    </p>
+  </div>
+
+  <script src="top-panel-movement.js"></script>
+  <script src="load-top-panel.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

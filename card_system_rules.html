@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Persi Ruleset - Crabs Demo</title>
+</head>
+<body>
+  <div id="top-panel-placeholder"></div>
+
+  <div class="bodycontent">
+    <h2 class="alltext h2text">Persi - Card Battle Ruleset</h2>
+    <p class="alltext ptext">
+      <strong>Persi</strong> is the core card game played within the Crabs demo. The goal? Beat your opponent down to 0 health.
+    </p>
+    <img src="images/gamba_persi.png" class="siteimage" />
+
+    <h3 class="alltext h2text">Basic Mechanics</h3>
+    <ul class="alltext list">
+      <li>Each card deals damage equal to its rank. For example, a 5 deals 5 damage. Max damage from a single card is 10.</li>
+      <li>Cards are placed on "dumps" (think stacks or zones). When a new card is placed, it's considered in an <strong>attacking state</strong>.</li>
+      <li>The opponent must respond by placing a matching card on top to block the attack:
+        <ul>
+          <li>Matching <strong>rank</strong> or <strong>suit</strong> is required to defend.</li>
+        </ul>
+      </li>
+      <li>If the defending player can't respond, they take the full damage from the card.</li>
+      <li>After defending, the newly played card becomes the new attacker. It's an endless slap-fight until someone caves in.</li>
+    </ul>
+
+    <h3 class="alltext h2text">Special Cards</h3>
+    <p class="alltext ptext">
+      Some cards come with spicy rules to mix up the game:
+    </p>
+    <ul class="alltext list">
+      <li><strong>Ace (any suit):</strong> When attacking, can only be defended with another Ace.</li>
+      <li><strong>Seven (any suit):</strong> Deals <strong>double damage</strong> when played. If stacked on top of another Seven, the damage just keeps getting better, because the multiplier keeps on rising.</li>
+    </ul>
+
+    <p class="alltext ptext">
+      That's the gist. It's a fast-paced, rule-light, damage-focused card game.
+    </p>
+  </div>
+
+  <script src="top-panel-movement.js"></script>
+  <script src="load-top-panel.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

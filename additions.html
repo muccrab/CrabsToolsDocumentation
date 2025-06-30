@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crabs Shared Utilities</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div>
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Shared Utility Library</h2>
+        <p class="alltext ptext">
+            To provide shared functionality across Crabs systems, a header-only library was created. Initially meant for small tools, it had a surprisingly large impact on development.
+        </p>
+
+        <h3 class="alltext h2text">Utility Functions</h3>
+        <ul class="alltext list">
+            <li><strong>Vector Utilities:</strong> Mapping between two vectors, splitting vectors, extracting keys from maps.</li>
+            <li><strong>String Utilities:</strong> Splitting strings based on custom logic, etc.</li>
+            <li><strong>Time Utilities:</strong> Provides UTC-based time formatting.</li>
+            <li><strong>Switcher:</strong> A helper for flipping between two objects—good for toggle logic like turn-based systems or card battles.</li>
+        </ul>
+
+        <h3 class="alltext h2text">Best Additions</h3>
+        <h4 class="alltext h2text">Indexer</h4>
+        <p class="alltext ptext">
+            <code>Indexer</code> acts as a memory container that tracks deleted entries to avoid unnecessary memory waste. Think of it like a twisted library system:
+        </p>
+        <ul class="alltext list">
+            <li>Each object added gets a unique ID and is considered “owned” by the library.</li>
+            <li>Handles can be distributed to represent temporary access—but the library maintains ownership.</li>
+            <li>If no one is responsible for the handle, the item gets deleted.</li>
+            <li>Supports iteration by the owning system (like a librarian flipping through the entire catalog).</li>
+        </ul>
+
+        <h4 class="alltext h2text">MultiIndexer</h4>
+        <p class="alltext ptext">
+            An extended version of <code>Indexer</code> that supports grouping. Each object can belong to a specific group, and systems can iterate over individual groups selectively.
+        </p>
+
+        <h4 class="alltext h2text">Signal</h4>
+        <p class="alltext ptext">
+            Built as a wrapper over <code>Indexer</code>, this class stores instances of <code>std::function&lt;void(Args...)&gt;</code>,
+            Can be used to register your own signal endpoints and can emit the signal. If the handle is lost, the enpoint is as well, so there won't be any phantom signals.
+        </p>
+
+        <h4 class="alltext h2text">TaskQueue</h4>
+        <p class="alltext ptext">
+            A task queue that processes tasks sequentially on a dedicated thread. It uses condition variables to maintain non-blocking behavior while staying mostly sequential in logic—ideal for offloading minor tasks without halting the game loop.
+        </p>
+
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

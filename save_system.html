@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Documentation for C++ Game Development Tools - Crabs</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div> 
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Save System</h2>
+        <p class="alltext ptext">
+            The Crabs Save System is by far the simplest component of the entire framework. It is comprised of two classes that operate relatively independently from each other.
+        </p>
+
+        <h3 class="alltext h3text">Core Classes</h3>
+        <ul class="alltext list">
+            <li><strong>SaveSystem:</strong> This is the main interface for managing saves. It allows creating, loading, and deleting saves with minimal effort.</li>
+            <li><strong>ISerializer:</strong> An interface used to serialize and deserialize save data. Currently, it saves files in JSON format with a <code>.sv</code> extension.</li>
+        </ul>
+
+        <h3 class="alltext h3text">SaveSystem Constructor Options</h3>
+        <p class="alltext ptext">
+            The <code>SaveSystem</code> constructor supports two modes of initialization:
+        </p>
+        <ul class="alltext list">
+            <li><strong>Local Path:</strong> Directly provide a path to store the saves locally.</li>
+            <li><strong>App Path:</strong> Provide an <code>app_name</code>, a relative <code>save_directory</code>, and an <code>appdata location</code>. This will resolve to a system-compliant path such as:<br>
+                <code>[User-specific application data folder]/appdata_location/appname/save_directory</code>
+            </li>
+        </ul>
+        <p class="alltext ptext">
+            For example, this resolves to <code>AppData/Local</code> on Windows and <code>~/.local/share</code> on Linux.
+        </p>
+        
+        <p class="alltext ptext">
+            This method ensures that users do not need to worry about storage permissions or platform-specific save paths.
+        </p>
+
+        <h3 class="alltext h3text">Creating and Loading Saves</h3>
+        <p class="alltext ptext">
+            Once a save is created via the system, it can be saved or loaded using the <code>ISerializer</code> interface. Although the current implementation uses JSON format, future versions might include compression or encoding to prevent casual tampering with save files.
+        </p>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>

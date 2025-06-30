@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crabs Quest System - Godot Integration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Quest System – Godot Integration</h2>
+
+        <h3 class="alltext h3text">Initialization</h3>
+        <p class="alltext ptext">
+            Inherit from <code>QuestSystemCPP</code> and make it global, then in the <code>_ready()</code> method, call:
+        </p>
+        <pre class="codeblock">onCreate()</pre>
+
+        <h3 class="alltext h3text">Assigning and Activating Quests</h3>
+        <p class="alltext ptext">
+            to assign and activate quests call these methods with quest name:
+        </p>
+        <pre class="codeblock">assignQuestCPP("quest_name")
+activateQuestCPP("quest_name")</pre>
+
+        <h3 class="alltext h3text">Saving and Loading Progress</h3>
+        <pre class="codeblock">var save_data = saveCPP()
+loadCPP(save_data)
+reloadCPP() # To restart the system</pre>
+
+        <h3 class="alltext h3text">Updating Quests</h3>
+        <pre class="codeblock">updateCPP(update_data_dict)</pre>
+
+        <h3 class="alltext h3text">Fetching All Quest Info</h3>
+        <pre class="codeblock">var quests_info = questsCPP()</pre>
+
+        <h3 class="alltext h3text">Creating Tasks</h3>
+        <p class="alltext ptext">You need to create a new gd script file and inherit from <code>GDTaskCPP</code> you can then and define:</p>
+        <pre class="codeblock">func _on_create(data: Dictionary) -> void: pass
+func _on_update(data: Dictionary) -> void: pass
+func _on_complete() -> void: pass
+
+completeCPP()
+completedCPP()</pre>
+
+        <p class="alltext ptext">Task JSON Example:</p>
+        <pre class="codeblock">{
+  "type": "gdtask",
+  "data": {
+    "gdtask": "res://path_to_your_task.gd",
+    "data": {}
+  }
+}</pre>
+
+        <h3 class="alltext h3text">Creating Callbacks</h3>
+        <p class="alltext ptext">Similiary to creating tasks, inherit from <code>GDCallbackCPP</code> and define:</p>
+        <pre class="codeblock">func _on_activate() -> void: pass
+func _on_finish() -> void: pass</pre>
+
+        <p class="alltext ptext">Callback JSON Example:</p>
+        <pre class="codeblock">{
+  "type": "gdcallback",
+  "data": {
+    "gdcallback": "res://path_to_your_callback.gd"
+  }
+}</pre>
+
+        <p class="alltext ptext">Refer to <a href="quest_system_create_quests.html">quest_system_create_quests.html</a> for quest file structure.</p>
+    </div>
+    <script src="top-panel-movement.js"></script>
+  <script src="load-top-panel.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

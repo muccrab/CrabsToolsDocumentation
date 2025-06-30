@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crabs Serializer System</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div> 
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Serializer System</h2>
+
+        <p class="alltext ptext">
+            As the name suggests, the Crabs Serializer module handles data serialization and deserialization within the engine. At the heart of this system is the <code>ISerializer</code> interface, which provides a flexible and minimalistic way to represent data structures.
+        </p>
+
+        <h3 class="alltext h3text">ISerializer</h3>
+        <p class="alltext ptext">
+            <code>ISerializer</code> acts as a general-purpose data container. It supports:
+        </p>
+        <ul class="alltext list">
+            <li>Primitive values</li>
+            <li>Arrays of values</li>
+            <li>Objects (key-value pairs)</li>
+            <li>Arrays of objects</li>
+        </ul>
+
+        <p class="alltext ptext">
+            While this doesn’t cover the full expressiveness of JSON (e.g., mixed arrays), it handles nearly all use cases in Crabs. This restriction keeps the serializer clean, manageable, and avoids unnecessary complexity. So far, mixed-type arrays haven’t been needed—and frankly, good riddance.
+        </p>
+
+        <h3 class="alltext h3text">Design Considerations</h3>
+        <p class="alltext ptext">
+            The current design uses <code>ISerializer</code> as an abstract interface, but there's a future plan to refactor this into a concrete class using the Strategy pattern. This would eliminate runtime polymorphism and provide a more modular, flexible structure.
+        </p>
+
+        <h3 class="alltext h3text">JSONDeserializer</h3>
+        <p class="alltext ptext">
+            <code>JSONDeserializer</code> is a static utility class with a single job: take a JSON-formatted string and return an <code>ISerializer</code> instance populated with the parsed data.
+        </p>
+        <p class="alltext ptext">
+            This conversion is done in two steps:
+        </p>
+        <ol class="alltext list">
+            <li>Preprocessing the JSON structure and flattening it into an intermediate form.</li>
+            <li>Reconstructing a proper <code>ISerializer</code> object based on that structure.</li>
+        </ol>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>

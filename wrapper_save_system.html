@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crabs Save System – Godot Integration</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div>
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Save System (Godot Wrapper)</h2>
+        <p class="alltext ptext">
+            The Crabs Save System is accessible in Godot via a simple wrapper class. All functionality is available through the <code>SaveSystemCPP</code> wrapper.
+        </p>
+
+        <h3 class="alltext h3text">Getting Started</h3>
+        <ul class="alltext list">
+            <li>Inherit from <code>SaveSystemCPP</code>.</li>
+            <li>In your <code>_ready()</code> function, call <code>setupCPP()</code>.</li>
+        </ul>
+
+        <h3 class="alltext h3text">Querying Saves</h3>
+        <p class="alltext ptext">Use <code>getSaveInfoCPP()</code> to fetch a list of all save entries:</p>
+        <pre class="codeblock">
+[
+    {
+        "name": "Save 1",
+        "id": 0,
+        "date": "2024-06-30T15:00:00Z"
+    },
+    ...
+]
+        </pre>
+        <p class="alltext ptext">
+            You can also check if there are any saves using <code>isEmptyCPP()</code>, which returns a boolean.
+        </p>
+
+        <h3 class="alltext h3text">Creating and Loading Saves</h3>
+        <ul class="alltext list">
+            <li>To start a new game, call <code>newGameCPP("SaveName")</code>. (Note: This does not create a save file until you call <code>saveCPP()</code>.)</li>
+            <li>To load a save, call <code>loadSave(id)</code> using the save's ID from <code>getSaveInfoCPP()</code>.</li>
+        </ul>
+
+        <h3 class="alltext h3text">Working with Save Data</h3>
+        <ul class="alltext list">
+            <li><code>saveToClass(class_name, id, object)</code> – Save a specific object into a class (class in this context means subfolder in save location).</li>
+            <li><code>loadFromClass(class_name, id)</code> – Load an object from the specified class.</li>
+        </ul>
+        <p class="alltext ptext">
+            These methods only update internal cache. To commit changes to disk, call <code>saveCPP()</code>.
+        </p>
+
+        <p class="alltext ptext">
+            All saves are cached internally. Manual saving through <code>saveCPP()</code> is required to persist the changes to disk.
+        </p>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

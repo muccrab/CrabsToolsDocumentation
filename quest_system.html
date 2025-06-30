@@ -28,7 +28,8 @@
             To add a quest, register it by writing its name and JSON path in a header file using <code>=</code> as a separator (e.g., <code>QuestName=path/to/quest.json</code>).
             After registration, the quest can be created, which makes it part of the system. Once added, the quest persists to maintain history and save progress.
             To activate a quest, use the designated activation method—**do not** just drop it into the Active group manually. Similarly, finishing quests manually is not recommended.
-            Use the <code>QuestSaveLoader</code> class to load quests with saved state.
+            Use the <code>QuestSaveLoader</code> class to load quests with saved state. You can also create your own quest in a system and design it as you wish, or use ISerializer class to 
+            load the quest from your own format.
         </p>
 
         <h3 class="alltext h3text">Quest Layer</h3>

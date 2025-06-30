@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crabs Godot Demo</title>
+</head>
+<body>
+<div class="bodycontent">
+    <h2 class="alltext h2text">Godot Integration – C++ Backend Wrappers</h2>
+    <p class="alltext ptext">
+        To connect the Crabs C++ backend with the Godot engine, a wrapper layer was implemented using <strong>GDExtensions</strong>—Godot’s native system for binding C++ classes to GDScript. This allows seamless integration and interaction between engine-side logic and native Crabs systems.
+    </p>
+
+    <p class="alltext ptext">
+        Each system in Crabs (e.g. Dialogue, Quest, Save, Serializer) exposes its core functionality to Godot via these wrappers. This approach keeps the performance and modularity of C++, while making systems accessible from Godot scripts.
+    </p>
+
+    <h3 class="alltext h3text">Wrapped Systems</h3>
+    <ul class="alltext list">
+        <li><a href="dialogue_wrapper.html" class="alltext">Dialogue System Wrapper</a></li>
+        <li><a href="quest_wrapper.html" class="alltext">Quest System Wrapper</a></li>
+        <li><a href="save_wrapper.html" class="alltext">Save System Wrapper</a></li>
+    </ul>
+
+    <p class="alltext ptext">
+        This integration makes it possible to control and manipulate Crabs systems from GDScript while maintaining full power and flexibility of their native C++ implementations.
+    </p>
+</div>
+</body>
+</html>
