@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Documentation for C++ Game Development Tools - Crabs</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div> 
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Quest System</h2>
+        
+        <p class="alltext ptext">
+            Designing a robust, extendable, and editable quest system was a challenge. In the end, I chose a JSON-based structure for defining quests. JSON allows for both flexibility and ease of editing.
+        </p>
+
+        <p class="alltext ptext">
+            Quests are defined as JSON objects. Each quest is composed of parts, and each part contains tasks. Let's break down these layers.
+        </p>
+
+        <h3 class="alltext h3text">System Layer</h3>
+        <p class="alltext ptext">
+            This layer manages quests using the Crabs <code>MultIndexer</code> utility, allowing quick assignment and retrieval of quests within groups.
+        </p>
+        <p class="alltext ptext">
+            To add a quest, register it by writing its name and JSON path in a header file using <code>=</code> as a separator (e.g., <code>QuestName=path/to/quest.json</code>).
+            After registration, the quest can be created, which makes it part of the system. Once added, the quest persists to maintain history and save progress.
+            To activate a quest, use the designated activation method—**do not** just drop it into the Active group manually. Similarly, finishing quests manually is not recommended.
+            Use the <code>QuestSaveLoader</code> class to load quests with saved state.
+        </p>
+
+        <h3 class="alltext h3text">Quest Layer</h3>
+        <p class="alltext ptext">
+            A single quest stores its name and a callback class. The callback handles signals for activation and completion.
+            A quest also contains multiple <code>QuestParts</code>, similar to how the system contains quests.
+            When all quest parts are finished, the entire quest is considered complete.
+            In the future, conditional logic may be added to automatically complete quests based on external triggers.
+        </p>
+
+        <h3 class="alltext h3text">Quest Part Layer</h3>
+        <p class="alltext ptext">
+            This layer manages a dictionary of tasks. Each part can define conditions to determine which tasks must be completed
+            and which subsequent <code>QuestPart</code> should be activated. These conditions are detailed on the Quest Creation page.
+        </p>
+
+        <h3 class="alltext h3text">Task Layer</h3>
+        <p class="alltext ptext">
+            Tasks are the most flexible part of the system. They can be completely customized by inheriting from the Crabs <code>Task</code> class.
+            Developers must register their custom task types in the <code>QuestFactory</code> for JSON parsing.
+            After registration, the task's methods (such as <code>update</code>, <code>loadSaveFromSerializer</code>, and <code>saveToSerializer</code>) can be overridden to implement custom behavior.
+        </p>
+
+        <div class="alltext linkblock">
+            <a class="alltext ptext" href="quest_system_create_quests.html">Here is a tutorial on how to create and customize your own quests.</a><br />
+            <a class="alltext ptext" href="quest_system_plans.html">Click here for future plans regarding the quest system.</a>
+        </div>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>

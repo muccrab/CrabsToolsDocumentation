@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>How to Create a Quest - Crabs Documentation</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div>
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Quest System - Quest Conditions and Callbacks</h2>
+
+        <p class="alltext ptext">
+            You can assign <strong>conditions</strong> to quest parts to control how and when parts get activated based on task completion.
+        </p>
+
+        <h3 class="alltext h3text">Condition Object</h3>
+        <p class="alltext ptext">
+            Conditions are specified as an array under the key <code>"conditions"</code> inside a quest part.
+            Each condition is an object with the following keys:
+        </p>
+        <ul class="alltext list">
+            <li><strong><code>check_type</code>:</strong> Determines if all or any tasks must be completed. Accepted values: <code>"all"</code> or <code>"any"</code>.</li>
+            <li><strong><code>checks</code>:</strong> (optional) Array of task names to apply the check to. If undefined, applies to all tasks.</li>
+            <li><strong><code>activator</code>:</strong> Defines what quest part(s) to activate. Can be:
+                <ul>
+                    <li><code>"next_part"</code>: activates the next sequential part.</li>
+                    <li>Array of strings: activates the named quest parts.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3 class="alltext h3text">Default Behavior</h3>
+        <p class="alltext ptext">
+            If no condition is defined for a quest part, it defaults to requiring completion of all tasks in that part, and then activates the next part.
+        </p>
+
+        <pre class="codeblock"><code>
+{
+    "conditions": [{
+        "check_type": "any",
+        "checks": ["Find Food", "Collect Wood"],
+        "activator": "next_part"
+    }]
+}
+        </code></pre>
+
+        <h3 class="alltext h3text">Quest Callback</h3>
+        <p class="alltext ptext">
+            You can also assign a <strong>quest callback</strong> to a quest. This allows you to receive notifications when a quest is activated or completed.
+        </p>
+        <p class="alltext ptext">
+            To do this:
+        </p>
+        <ol class="alltext list">
+            <li>Create a class inheriting from <code>crabs::QuestCallback</code>.</li>
+            <li>Override the relevant methods like <code>onActivate()</code> and <code>onFinish()</code>.</li>
+            <li>Register the callback class in the <code>QuestFactory</code> similar to how custom tasks are registered.</li>
+        </ol>
+
+        <pre class="codeblock"><code>
+class MyQuestCallback : public crabs::QuestCallback {
+public:
+    void onActivate() override {
+        // Custom behavior when quest is activated
+    }
+
+    void onFinish() override {
+        // Custom behavior when quest is finished
+    }
+};
+        </code></pre>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>

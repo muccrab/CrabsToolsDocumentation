@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Documentation for C++ Game Development Tools - Crabs</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div> 
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Dialogue System – Language</h2>
+
+        <p class="alltext ptext">
+            A Dialogue System language file looks like this:
+        </p>
+        <img>
+
+        <p class="alltext ptext">
+            As you can see, every line starts with a keyword. This keyword defines what happens on that line.
+            The most special keyword is <code>branch</code>, which defines a section of code that runs in its own scope with local variables.
+            A branch ends when another branch begins or at the end of the file.
+        </p>
+
+        <p class="alltext ptext">
+            Line indentation is only for the user’s convenience to visually distinguish branches. It has no impact on how the code is executed (no Python nonsense here).
+        </p>
+
+        <p class="alltext ptext">
+            Every file must include a <code>root</code> branch, which is the entry point. Even files with only one branch must declare a root.
+        </p>
+
+        <p class="alltext ptext">
+            Each line can only represent one command. Empty lines are ignored. Everything after the <code>#</code> symbol is treated as a comment and ignored.
+        </p>
+
+        <p class="alltext ptext">
+            Arguments are separated by spaces, unless they are enclosed in quotes.
+        </p>
+
+        <p class="alltext ptext">
+            The following commands are currently supported:
+        </p>
+
+        <h3 class="alltext h3text">Command - climb</h3>
+        <p class="alltext ptext">Jumps to the specified branch with optional arguments.</p>
+
+        <h3 class="alltext h3text">Command - climb_random</h3>
+        <p class="alltext ptext">Randomly selects one of the provided branches to climb into.</p>
+
+        <h3 class="alltext h3text">Command - climb_switch</h3>
+        <p class="alltext ptext">Selects a branch to climb into based on the value of the first argument.</p>
+
+        <h3 class="alltext h3text">Command - listen</h3>
+        <p class="alltext ptext">Waits for user input and halts execution until a response is given. It provides users with the options if provided</p>
+
+        <h3 class="alltext h3text">Command - listen_brother</h3>
+        <p class="alltext ptext">Same as <code>listen</code>, but also sets the speaking character.</p>
+
+        <h3 class="alltext h3text">Command - collect</h3>
+        <p class="alltext ptext">Evaluates a value and stores it in a named variable.</p>
+
+        <h3 class="alltext h3text">Command - debug</h3>
+        <p class="alltext ptext">Logs the evaluated arguments to the output stream.</p>
+
+        <h3 class="alltext h3text">Command - say</h3>
+        <p class="alltext ptext">Outputs dialogue and pauses execution.</p>
+
+        <h3 class="alltext h3text">Command - say_brother</h3>
+        <p class="alltext ptext">Like <code>say</code>, but includes the speaker's name.</p>
+
+        <h3 class="alltext h3text">Command - trigger</h3>
+        <p class="alltext ptext">Calls one or more triggers by name.</p>
+
+        <h3 class="alltext h3text">Command - return</h3>
+        <p class="alltext ptext">Ends the current branch and resumes after it.</p>
+
+        <h3 class="alltext h3text">Command - exit</h3>
+        <p class="alltext ptext">Immediately terminates the dialogue by clearing the stack.</p>
+
+        <a class="alltext ptext" href="dialogue_system_language_parsing.html">
+            See Also Argument Parsing!
+        </a>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>

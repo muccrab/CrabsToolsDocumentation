@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>How to Create a Quest - Crabs Documentation</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div>
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Quest System - Creating Your Own Quest</h2>
+
+        <p class="alltext ptext">
+            Crabs Quest System uses a JSON-based structure to define quests. Each quest is composed of parts, and each part contains tasks.
+            Below is a breakdown of how to define your own quest.
+        </p>
+
+        <h3 class="alltext h3text">Basic Structure</h3>
+        <p class="alltext ptext">
+            Here's a simple example of a quest definition in JSON:
+        </p>
+
+<pre class="codeblock">
+<code>{
+    "name": "Quest 1",
+    "quest_parts": [{
+        "name": "Introduction",
+        "tasks": [{
+            "name": "Meet the Mentor",
+            "type": "basicTask",
+            "data": { "points": 10 }
+        },{
+            "name": "Learn the Basics",
+            "type": "basicTask",
+            "data": { "points": 20 }
+        }]
+    }, {
+        "name": "Gathering Supplies",
+        "status": "inactive",
+        "tasks": [{
+            "name": "Collect Wood",
+            "type": "basicTask",
+            "data": { "points": 15 }
+        },{
+            "name": "Find Food",
+            "type": "basicTask",
+            "data": { "points": 25 }
+        }]
+    }]
+}
+</code>
+</pre>
+
+        <h3 class="alltext h3text">Quest Properties</h3>
+        <ul class="alltext list">
+            <li><strong><code>name</code></strong>: The title of the quest, used for identifying and displaying the quest.</li>
+            <li><strong><code>quest_parts</code></strong>: An array of objects, each representing a segment of the quest.</li>
+        </ul>
+
+        <h3 class="alltext h3text">Quest Part Properties</h3>
+        <ul class="alltext list">
+            <li><strong><code>name</code></strong>: The name of the quest part.</li>
+            <li><strong><code>status</code></strong> (optional): Determines the initial state of the part. Possible values are <code>active</code>, <code>inactive</code>, or omitted (defaults to <code>active</code>).</li>
+            <li><strong><code>tasks</code></strong>: An array of tasks that must be completed in this part.</li>
+        </ul>
+
+        <h3 class="alltext h3text">Task Properties</h3>
+        <ul class="alltext list">
+            <li><strong><code>name</code></strong>: The label shown to the player for this task.</li>
+            <li><strong><code>type</code></strong>: Type of task. Must match a registered task type in the quest system (e.g., <code>basicTask</code>).</li>
+            <li><strong><code>data</code></strong>: Task-specific configuration. For example, <code>points</code> might indicate how much XP this task gives or its weight.</li>
+        </ul>
+
+        <h3 class="alltext h3text">How to Register Custom Tasks</h3>
+        <p class="alltext ptext">
+            If you create a custom task class in C++, register it using the QuestFactory so the system can instantiate it based on the <code>type</code> field in JSON.
+            Each task class must inherit from the base <code>Task</code> class and implement required logic.
+        </p>
+
+        <h3 class="alltext h3text">Tips</h3>
+        <ul class="alltext list">
+            <li>You can chain parts together using custom logic in QuestPart conditions (see advanced setup).</li>
+        </ul>
+
+        <a href="quest_system_create_quests_advanced.html" class="alltext ptext">Click here to see advanced setup</a>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

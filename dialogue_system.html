@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Documentation for C++ Game Development Tools - Crabs</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div> 
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Dialogue System</h2>
+        <p class="alltext ptext">
+            The Dialogue System was made to be simple to use, easy to set up in-engine, and provide features like localization, triggers, input handling, and most importantly—dialogue. 
+            I also wanted dialogue to be branchable and easy to edit. I could have settled on a predefined file format like JSON, but I realized that made dialogues hard to write and read. 
+            So I decided to create an interpreter for the Crabs Dialogue Language. It's a simple instruction language but robust enough to be upgraded in the future. 
+            The interpreter supports instances, allowing multiple dialogues to run at once.
+        </p>
+
+        <a href="dialogue_system_language.html" class="alltext ptext">
+            The specifications for the dialogue language are provided below. With that, you have everything you need to start creating your own stories and characters. 
+            (Well, that and the use of the wrapper framework.)
+        </a>
+
+        <p class="alltext ptext">
+            For those interested in building their own wrappers—or just curious—I'll now provide an overview of how the dialogue system works. 
+            First things first: it's important to understand that the system operates across multiple layers.
+        </p>
+
+        <img />
+
+        <p class="alltext ptext">
+            The first layer is the <strong>System Layer</strong>. This serves as the foundation and holds data like the current locale and the root folder for all dialogues. 
+            It also contains the next layer.
+        </p>
+
+        <p class="alltext ptext">
+            The second layer is the <strong>Dialogue Cache Layer</strong>. This is where dialogues are loaded based on their directory. 
+            You can preload all dialogues in a directory, unload them, or reload them. These operations happen on a separate thread, and dialogues are only saved after execution finishes. 
+            Keep in mind that this isn't true parallelism—it processes tasks sequentially on a different thread to avoid slowing down the game loop. 
+            This decision was made to avoid race conditions with multiple cache operations. 
+            To achieve this semi-parallelism, the <code>TaskQueue</code> class from Crabs Additions is used. 
+            Currently, the Dialogue Cache Layer is implemented as a dictionary, but I plan to remake it using a trie-based structure.
+        </p>
+
+        <p class="alltext ptext">
+            The third layer is the <strong>Dialogue Stack Layer</strong>. This represents a single loaded folder of dialogues. 
+            (This might change in the future with the introduction of Trie Cache, which could make this layer fully virtual.)
+        </p>
+
+        <p class="alltext ptext">
+            The fourth layer is the <strong>Dialogue Layer</strong>. Here, the dialogue holds header information and a flag indicating whether it's initialized. 
+            It also contains its own unique instance of the interpreter.
+        </p>
+
+        <p class="alltext ptext">
+            The fifth layer is the <strong>Dialogue Interpreter</strong>. This is the most important part. 
+            Its job is to compile dialogue files into an internal format. 
+            It stores information about branches—where they start, how long they are—and about commands/instructions. 
+            These are extendable and simple to implement thanks to polymorphism. 
+            It also tracks dialogue instances using the <code>Indexer</code> class from Crabs Additions and uses the <code>JSONSerializer</code> from Crabs Serializer for localization.
+        </p>
+
+        <p class="alltext ptext">
+            The final layer is the <strong>Instance Layer</strong>. Users receive a handle to a specific dialogue instance from the interpreter. 
+            With this handle, each instance can be treated independently. 
+            It holds data like the current index, branch stack, registered triggers, variables, and execution flags.
+        </p>
+
+        <p class="alltext ptext">
+            As you've probably noticed, there are plans to improve the system even further. 
+            Right now, the system offers a simple and effective way to create and interpret dialogues, 
+            but I believe there's still plenty of room for improvement.
+        </p>
+
+        <a href="dialogue_system_plans.html" class="alltext ptext">
+            Click here for future plans regarding the dialogue system.    
+        </a>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>

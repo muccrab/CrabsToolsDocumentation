@@ -1,0 +1,182 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Initial style for the toppanel */
+.toppanel {
+    display: flex;
+    background-color: rgba(51, 51, 51, 0.9);
+    height: 60px; /* Adjust as needed */
+    position: absolute; /* Initially position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Make sure it stays above other content */
+    transition: position 0.3s ease, top 0.3s ease; /* Smooth transition for position change */
+}
+
+/* When the panel becomes fixed */
+.toppanel.fixed {
+    position: fixed;
+    top: 0;
+}
+
+/* Panel elements styling */
+.panelelement {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto; /* Ensure element width adjusts to content */
+    margin: 0;
+}
+
+.panelelement img {
+    height: 100%;
+    width: auto;
+    display: block; 
+}
+
+.panelelement a {
+    height: 100%;
+    width: auto;
+    display: block; 
+}
+
+.panelelement button {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.panelelement button:hover {
+    background-color: #c5c5c5;
+    color: rgb(0, 0, 0);
+}
+
+.panelelement .content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+    width: 100%;
+}
+
+.panelelement:hover .content {
+    display: block;
+}
+
+.panelelement .content a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.panelelement .content a:hover {
+    background-color: #666;
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in effect to the body */
+body {
+    animation: fadeIn 1s ease-in-out; /* Adjust duration and easing as needed */
+}
+
+body {
+    background: linear-gradient(to bottom, #333, #202020); /* Adjust colors and direction as needed */
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Initial padding for the content */
+.bodycontent {
+    padding-top: 60px; /* Adjust to match the height of the panel*/
+    padding-bottom: 30px;
+    padding-left: 10px;
+}
+
+.githubimage{
+    margin: 2px;
+    filter: invert(37%) sepia(100%) saturate(7318%) hue-rotate(10deg) brightness(93%) contrast(97%);
+}
+.githubimage:hover{
+    margin: 4px;
+    filter: invert(100%);
+}
+
+
+
+.alltext{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    display: block;
+    margin: auto
+}
+
+.h1text, .h2text, .h3text{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.ptext{
+    text-align: justify;
+    width: 50%;
+}
+
+.imagetext{
+    font-size: 10px;
+    color: rgb(182, 182, 182);
+    text-align: center;
+    width: 50%;
+}
+
+.siteimage{
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    image-rendering: optimizeQuality
+}
+
+.list {
+    width: 50%;
+}
+
+.codeblock {
+    background-color: #c6c4c4;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}

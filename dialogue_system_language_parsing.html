@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Documentation for C++ Game Development Tools - Crabs</title>
+</head>
+<body>
+    <div id="top-panel-placeholder"></div> 
+
+    <div class="bodycontent">
+        <h2 class="alltext h2text">Crabs Dialogue System - Argument Parsing</h2>
+        <p class="alltext ptext">
+            Arguments in the dialogue system are parsed and interpreted in a specific order to determine their actual runtime values.
+        </p>
+
+        <h3 class="alltext h3text">Argument Types Handled</h3>
+        <ul class="alltext list">
+            <li><strong><code>ans</code>:</strong> Resolves to the player's last input, or an empty string if none was provided.</li>
+            <li><strong>Quoted string:</strong> Strings wrapped in double quotes (e.g., <code>"hello"</code>) return the contents without the quotes.</li>
+            <li><strong><code>param:{index}</code>:</strong> Retrieves the parameter from the current branch stack. Throws if the index is out of range or the syntax is incorrect.</li>
+            <li><strong>Variable lookup:</strong> If the argument matches a variable name in the current stack environment, its value is returned.</li>
+            <li><strong>Locale translation:</strong> If all other checks fail, the system attempts to resolve the argument as a path to a localized string.</li>
+        </ul>
+
+        <h3 class="alltext h3text">Locale Translation</h3>
+        <p class="alltext ptext">
+            Locale translation treats arguments as keys to hierarchical data defined in a localization file or system.
+        </p>
+        <ul class="alltext list">
+            <li>The argument is split by <code>.</code> to navigate nested objects (e.g., <code>npc.dialogue.hello</code>).</li>
+            <li>Each part accesses a sub-object or value inside the locale tree.</li>
+            <li>The final part resolves to a value; if not found, an error is thrown.</li>
+            <li>If any part starts with <code>&</code>, it's dynamically evaluated using <code>processArgument</code> first (useful for referencing variable keys).</li>
+        </ul>
+
+        <h3 class="alltext h3text">Branch Translations</h3>
+        <p class="alltext ptext">
+            A special compiler-side translation allows branches starting with <code>:</code> to be precompiled into numerical branch IDs.
+            This can't be evaluated dynamically at runtime—use <code>climb_switch</code> or <code>climb_random</code> if you need dynamic behavior.
+        </p>
+        <p class="alltext ptext">
+            Any arguments passed in square brackets <code>[]</code> are treated as regular arguments and parsed accordingly.
+        </p>
+    </div>
+
+    <script src="top-panel-movement.js"></script>
+    <script src="load-top-panel.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>
