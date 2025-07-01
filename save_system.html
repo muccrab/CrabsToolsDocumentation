@@ -18,7 +18,7 @@
         <h3 class="alltext h3text">Core Classes</h3>
         <ul class="alltext list">
             <li><strong>SaveSystem:</strong> This is the main interface for managing saves. It allows creating, loading, and deleting saves with minimal effort.</li>
-            <li><strong>ISerializer:</strong> An interface used to serialize and deserialize save data. Currently, it saves files in JSON format with a <code>.sv</code> extension.</li>
+            <li><strong>Save:</strong> This class is used for managing a single save, Saving and loading specific files etc.</li>
         </ul>
 
         <h3 class="alltext h3text">SaveSystem Constructor Options</h3>
@@ -32,9 +32,9 @@
             </li>
         </ul>
         <p class="alltext ptext">
-            For example, this resolves to <code>AppData/Local</code> on Windows and <code>~/.local/share</code> on Linux.
+            [User-specific application data folder] resolves to <code>~/AppData/Local/...</code> on Windows and <code>~/.local/share/...</code> on Linux.
         </p>
-        
+
         <p class="alltext ptext">
             This method ensures that users do not need to worry about storage permissions or platform-specific save paths.
         </p>

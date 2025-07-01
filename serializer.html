@@ -28,12 +28,12 @@
         </ul>
 
         <p class="alltext ptext">
-            While this doesn’t cover the full expressiveness of JSON (e.g., mixed arrays), it handles nearly all use cases in Crabs. This restriction keeps the serializer clean, manageable, and avoids unnecessary complexity. So far, mixed-type arrays haven’t been needed—and frankly, good riddance.
+            While this doesn’t cover the full expressiveness of JSON (e.g., mixed arrays), it handles nearly all use cases in Crabs. This restriction keeps the serializer clean, manageable, and avoids unnecessary complexity. So far, mixed-type arrays haven't been needed.
         </p>
 
         <h3 class="alltext h3text">Design Considerations</h3>
         <p class="alltext ptext">
-            The current design uses <code>ISerializer</code> as an abstract interface, but there's a future plan to refactor this into a concrete class using the Strategy pattern. This would eliminate runtime polymorphism and provide a more modular, flexible structure.
+            The current design uses <code>ISerializer</code> as an abstract interface, but there's a future plan to refactor this into a concrete class using the Strategy pattern. This would eliminate polymorphism issues and provide a more modular, flexible structure.
         </p>
 
         <h3 class="alltext h3text">JSONDeserializer</h3>
