@@ -40,13 +40,30 @@
         <p class="alltext ptext">
             <code>JSONDeserializer</code> is a static utility class with a single job: take a JSON-formatted string and return an <code>ISerializer</code> instance populated with the parsed data.
         </p>
-        <p class="alltext ptext">
-            This conversion is done in two steps:
-        </p>
-        <ol class="alltext list">
-            <li>Preprocessing the JSON structure and flattening it into an intermediate form.</li>
-            <li>Reconstructing a proper <code>ISerializer</code> object based on that structure.</li>
-        </ol>
+<p class="alltext ptext">
+    This conversion is done in two steps:
+</p>
+<ol class="alltext list">
+    <li>Preprocessing the JSON structure and flattening it into an intermediate form.</li>
+    <li>Reconstructing a proper <code>ISerializer</code> object based on that structure.</li>
+</ol>
+
+<p class="alltext ptext">
+    For Stage 1, I'm using a Deterministic Stack Automaton:
+</p>
+<img src="/images/deserializer_stage_1.png" alt="Deserializer Stage 1 Automaton" class="siteimage" />
+
+<p class="alltext ptext">
+    Here, <code>Alpha</code> represents any character except <code>"</code>, while <code>Beta</code> includes numeric and alphabetic characters, as well as <code>.</code> and <code>-</code>.
+</p>
+
+<p class="alltext ptext">
+    After/Before each transition between the main parts in the automaton, an entry is recorded. These entries are not shown in the diagram, but they include: <code>OpenObject</code>, <code>CloseObject</code>, <code>Key</code>, <code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Null</code>, <code>OpenArray</code>, and <code>CloseArray</code>.
+</p>
+
+<p class="alltext ptext">
+    Once the entire JSON is converted into this flat vector of entries, it becomes trivial to reconstruct a full <code>JSONSerializer</code> object from it. That's basically what Stage 2 is all about.
+</p>
     </div>
 
     <script src="top-panel-movement.js"></script>
