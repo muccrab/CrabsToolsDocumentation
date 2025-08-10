@@ -1,5 +1,7 @@
+const path_to_top = document.currentScript.getAttribute('path_to_top') ?? "./";
+
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('top_panel.html')
+    fetch(path_to_top + 'top_panel.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('top-panel-placeholder').innerHTML = data;

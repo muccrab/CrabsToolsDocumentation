@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['basic_5fcallback_0',['BASIC_CALLBACK',['../d2/da9/classcrabs_1_1Quest.html#a0624fa69f950d13b7c6f180dcff72f8f',1,'crabs::Quest']]],
+  ['basiccardcmp_1',['BasicCardCMP',['../dd/d51/classcrabs_1_1BasicCardCMP.html',1,'crabs']]],
+  ['battle_5fended_2',['battle_ended',['../da/d6a/classcrabs_1_1IActor.html#ac10892e7be507a40a6a956e03ea5b7de',1,'crabs::IActor::battle_ended()'],['../de/d45/battlefield_8hpp.html#ac1230b29e6a0a225976e4738d3b3c704ac0d327a18cfa55699f1df4609ceced50',1,'battle_endedcrabs']]],
+  ['battle_5fended_5ftype_3',['BATTLE_ENDED_TYPE',['../df/d13/mapper_8hpp.html#aab37bb53cc079e125b8787c7df6b7230',1,'mapper.hpp']]],
+  ['battle_5flogger_2ehpp_4',['battle_logger.hpp',['../d5/dc4/battle__logger_8hpp.html',1,'']]],
+  ['battle_5fmove_2ehpp_5',['battle_move.hpp',['../d5/dc3/battle__move_8hpp.html',1,'']]],
+  ['battle_5fnotifier_2ehpp_6',['battle_notifier.hpp',['../da/d82/battle__notifier_8hpp.html',1,'']]],
+  ['battle_5fstarted_7',['battle_started',['../de/d45/battlefield_8hpp.html#ac1230b29e6a0a225976e4738d3b3c704a64e03031f9744c24eb080af25878499f',1,'crabs']]],
+  ['battle_5fstarted_5ftype_8',['BATTLE_STARTED_TYPE',['../df/d13/mapper_8hpp.html#a5c016815764c3c1a58b12a572cc12b27',1,'mapper.hpp']]],
+  ['battlefield_9',['BattleField',['../de/d61/classcrabs_1_1BattleField.html',1,'crabs::BattleField'],['../de/d61/classcrabs_1_1BattleField.html#a383d87056e9c40a2aa71a1ee67773099',1,'crabs::BattleField::BattleField()']]],
+  ['battlefield_2ehpp_10',['battlefield.hpp',['../de/d45/battlefield_8hpp.html',1,'']]],
+  ['battlelog_11',['BattleLog',['../db/d60/structcrabs_1_1BattleLog.html',1,'crabs']]],
+  ['battlelogentryenum_12',['BattleLogEntryEnum',['../de/d45/battlefield_8hpp.html#ac1230b29e6a0a225976e4738d3b3c704',1,'crabs']]],
+  ['battlelogger_13',['BattleLogger',['../d9/d05/classBattleLogger.html',1,'']]],
+  ['battlemove_14',['BattleMove',['../d6/dea/structcrabs_1_1BattleMove.html',1,'crabs']]],
+  ['battlenotifyer_15',['BattleNotifyer',['../df/dcb/classBattleNotifyer.html',1,'']]],
+  ['boolean_16',['Boolean',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabea27226c864bac7454a8504f8edb15d95b',1,'Booleancrabs'],['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabea27226c864bac7454a8504f8edb15d95b',1,'Booleancrabs']]],
+  ['boolean_17',['boolean',['../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fca84e2c64f38f78ba3ea5c905ab5a2da27',1,'crabs']]],
+  ['branchinfo_18',['BranchInfo',['../de/d65/structcrabs_1_1BranchInfo.html',1,'crabs']]]
+];
