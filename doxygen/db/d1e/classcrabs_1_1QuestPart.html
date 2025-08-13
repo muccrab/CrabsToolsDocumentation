@@ -116,7 +116,7 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../db/d1e/classcrabs_1_1QuestPart.html">QuestPart</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../db/d1e/classcrabs_1_1QuestPart.html">QuestPart</a> &amp;)=delete</td></tr>
 <tr class="separator:a95e28f3ba6cc526389583ab61b9f2137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158ff09ee4a8f29a8b85a678bd9d2c9a" id="r_a158ff09ee4a8f29a8b85a678bd9d2c9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a158ff09ee4a8f29a8b85a678bd9d2c9a">update</a> (const std::any &amp;data)</td></tr>
-<tr class="memdesc:a158ff09ee4a8f29a8b85a678bd9d2c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update quest part with external data.  <br /></td></tr>
+<tr class="memdesc:a158ff09ee4a8f29a8b85a678bd9d2c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update quest part (all tasks) with external data and check all conditions.  <br /></td></tr>
 <tr class="separator:a158ff09ee4a8f29a8b85a678bd9d2c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d39cc2489cf6ddea25d56d1fe609178" id="r_a0d39cc2489cf6ddea25d56d1fe609178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d39cc2489cf6ddea25d56d1fe609178">addTask</a> (const std::string &amp;task_name, std::unique_ptr&lt; <a class="el" href="../../d1/d22/classcrabs_1_1Task.html">Task</a> &gt; task)</td></tr>
 <tr class="memdesc:a0d39cc2489cf6ddea25d56d1fe609178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a single task by name.  <br /></td></tr>
@@ -513,6 +513,12 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if does not have a quest owner </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -531,7 +537,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Update quest part with external data. </p>
+<p>Update quest part (all tasks) with external data and check all conditions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Arbitrary data for update. </td></tr>

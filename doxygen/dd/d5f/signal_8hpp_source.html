@@ -93,55 +93,55 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <a href="../../dd/d5f/signal_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef CRABS_ADITIONS_SIGNAL_HPP_</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define CRABS_ADITIONS_SIGNAL_HPP_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/d13/indexer_8hpp.html">indexer.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>crabs {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef CRABS_ADITIONS_SIGNAL_HPP_</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define CRABS_ADITIONS_SIGNAL_HPP_</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../da/d13/indexer_8hpp.html">indexer.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>crabs {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d25/classcrabs_1_1Signal.html">Signal</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#a737ae8582314410719a85ba52e1a7a59">   21</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../de/d25/classcrabs_1_1Signal.html#a737ae8582314410719a85ba52e1a7a59">function_t</a> = std::function&lt;void(Args...)&gt;;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#ad6dfa82782e118a74aab917b0b07714e">   23</a></span>        <span class="keyword">using </span><a class="code hl_class" href="../../d6/daf/classcrabs_1_1IndexHandle.html">handle_t</a> = <a class="code hl_class" href="../../d6/daf/classcrabs_1_1IndexHandle.html">IndexHandle&lt;function_t&gt;</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#ad2aa1b6447442adf20635c9b45b64e5c">   25</a></span>        <span class="keyword">using </span><a class="code hl_class" href="../../db/dab/classcrabs_1_1Indexer.html">indexer_t</a> = <a class="code hl_class" href="../../db/dab/classcrabs_1_1Indexer.html">Indexer&lt;function_t&gt;</a>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#ae38180f3f65e6a9c01eb89e14af5bd7d">   32</a></span>        <span class="keyword">inline</span> <a class="code hl_class" href="../../d6/daf/classcrabs_1_1IndexHandle.html">handle_t</a> <a class="code hl_function" href="../../de/d25/classcrabs_1_1Signal.html#ae38180f3f65e6a9c01eb89e14af5bd7d">regFunc</a>(<a class="code hl_typedef" href="../../de/d25/classcrabs_1_1Signal.html#a737ae8582314410719a85ba52e1a7a59">function_t</a> func) { <span class="comment">// Note: Do not lose the handle or you won&#39;t receive signals</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span> m_indexer.<a class="code hl_function" href="../../db/dab/classcrabs_1_1Indexer.html#a8f0f523ac42aaddca91ab8375d280cf4">makeNew</a>(std::move(func));</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../de/d25/classcrabs_1_1Signal.html">Signal</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#a737ae8582314410719a85ba52e1a7a59">   20</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="../../de/d25/classcrabs_1_1Signal.html#a737ae8582314410719a85ba52e1a7a59">function_t</a> = std::function&lt;void(Args...)&gt;;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#ad6dfa82782e118a74aab917b0b07714e">   22</a></span>        <span class="keyword">using </span><a class="code hl_class" href="../../d6/daf/classcrabs_1_1IndexHandle.html">handle_t</a> = <a class="code hl_class" href="../../d6/daf/classcrabs_1_1IndexHandle.html">IndexHandle&lt;function_t&gt;</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#ad2aa1b6447442adf20635c9b45b64e5c">   24</a></span>        <span class="keyword">using </span><a class="code hl_class" href="../../db/dab/classcrabs_1_1Indexer.html">indexer_t</a> = <a class="code hl_class" href="../../db/dab/classcrabs_1_1Indexer.html">Indexer&lt;function_t&gt;</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#ae38180f3f65e6a9c01eb89e14af5bd7d">   31</a></span>        <span class="keyword">inline</span> <a class="code hl_class" href="../../d6/daf/classcrabs_1_1IndexHandle.html">handle_t</a> <a class="code hl_function" href="../../de/d25/classcrabs_1_1Signal.html#ae38180f3f65e6a9c01eb89e14af5bd7d">regFunc</a>(<a class="code hl_typedef" href="../../de/d25/classcrabs_1_1Signal.html#a737ae8582314410719a85ba52e1a7a59">function_t</a> func) { <span class="comment">// Note: Do not lose the handle or you won&#39;t receive signals</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">return</span> m_indexer.<a class="code hl_function" href="../../db/dab/classcrabs_1_1Indexer.html#a8f0f523ac42aaddca91ab8375d280cf4">makeNew</a>(std::move(func));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
 </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#a75d108404187538f5dbc56bb176b63b5">   39</a></span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d25/classcrabs_1_1Signal.html#a75d108404187538f5dbc56bb176b63b5">emit</a>(Args... args)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp;&amp; func : m_indexer) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                func(args...);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../de/d25/classcrabs_1_1Signal.html#a75d108404187538f5dbc56bb176b63b5">   38</a></span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d25/classcrabs_1_1Signal.html#a75d108404187538f5dbc56bb176b63b5">emit</a>(Args... args)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp;&amp; func : m_indexer) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                func(args...);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_typedef" href="../../de/d25/classcrabs_1_1Signal.html#ad2aa1b6447442adf20635c9b45b64e5c">indexer_t</a> m_indexer;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_typedef" href="../../de/d25/classcrabs_1_1Signal.html#ad2aa1b6447442adf20635c9b45b64e5c">indexer_t</a> m_indexer;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclasscrabs_1_1IndexHandle_html"><div class="ttname"><a href="../../d6/daf/classcrabs_1_1IndexHandle.html">crabs::IndexHandle</a></div><div class="ttdoc">Handle for an object in the Indexer. Move-only.</div><div class="ttdef"><b>Definition</b> indexer.hpp:96</div></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasscrabs_1_1IndexHandle_html"><div class="ttname"><a href="../../d6/daf/classcrabs_1_1IndexHandle.html">crabs::IndexHandle</a></div><div class="ttdoc">Handle for an object in the Indexer. Move-only.</div><div class="ttdef"><b>Definition</b> indexer.hpp:95</div></div>
 <div class="ttc" id="aclasscrabs_1_1Indexer_html"><div class="ttname"><a href="../../db/dab/classcrabs_1_1Indexer.html">crabs::Indexer&lt; function_t &gt;</a></div></div>
-<div class="ttc" id="aclasscrabs_1_1Indexer_html_a8f0f523ac42aaddca91ab8375d280cf4"><div class="ttname"><a href="../../db/dab/classcrabs_1_1Indexer.html#a8f0f523ac42aaddca91ab8375d280cf4">crabs::Indexer::makeNew</a></div><div class="ttdeci">IndexHandle&lt; TType &gt; makeNew(Args &amp;&amp;... args)</div><div class="ttdoc">Creates a new object in the indexer and returns a handle. Updates version of the itterator.</div><div class="ttdef"><b>Definition</b> indexer.hpp:292</div></div>
-<div class="ttc" id="aclasscrabs_1_1Signal_html"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html">crabs::Signal</a></div><div class="ttdoc">Signal class supporting registration and broadcasting to multiple listeners.</div><div class="ttdef"><b>Definition</b> signal.hpp:19</div></div>
-<div class="ttc" id="aclasscrabs_1_1Signal_html_a737ae8582314410719a85ba52e1a7a59"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html#a737ae8582314410719a85ba52e1a7a59">crabs::Signal::function_t</a></div><div class="ttdeci">std::function&lt; void(Args...)&gt; function_t</div><div class="ttdoc">Function type representing a listener.</div><div class="ttdef"><b>Definition</b> signal.hpp:21</div></div>
-<div class="ttc" id="aclasscrabs_1_1Signal_html_a75d108404187538f5dbc56bb176b63b5"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html#a75d108404187538f5dbc56bb176b63b5">crabs::Signal::emit</a></div><div class="ttdeci">void emit(Args... args) const</div><div class="ttdoc">Emits the signal to all registered listeners.</div><div class="ttdef"><b>Definition</b> signal.hpp:39</div></div>
-<div class="ttc" id="aclasscrabs_1_1Signal_html_ad2aa1b6447442adf20635c9b45b64e5c"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html#ad2aa1b6447442adf20635c9b45b64e5c">crabs::Signal::indexer_t</a></div><div class="ttdeci">Indexer&lt; function_t &gt; indexer_t</div><div class="ttdoc">Indexer type for managing the list of listeners.</div><div class="ttdef"><b>Definition</b> signal.hpp:25</div></div>
-<div class="ttc" id="aclasscrabs_1_1Signal_html_ae38180f3f65e6a9c01eb89e14af5bd7d"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html#ae38180f3f65e6a9c01eb89e14af5bd7d">crabs::Signal::regFunc</a></div><div class="ttdeci">handle_t regFunc(function_t func)</div><div class="ttdoc">Registers a listener to the signal.</div><div class="ttdef"><b>Definition</b> signal.hpp:32</div></div>
+<div class="ttc" id="aclasscrabs_1_1Indexer_html_a8f0f523ac42aaddca91ab8375d280cf4"><div class="ttname"><a href="../../db/dab/classcrabs_1_1Indexer.html#a8f0f523ac42aaddca91ab8375d280cf4">crabs::Indexer::makeNew</a></div><div class="ttdeci">IndexHandle&lt; TType &gt; makeNew(Args &amp;&amp;... args)</div><div class="ttdoc">Creates a new object in the indexer and returns a handle. Updates version of the itterator.</div><div class="ttdef"><b>Definition</b> indexer.hpp:291</div></div>
+<div class="ttc" id="aclasscrabs_1_1Signal_html"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html">crabs::Signal</a></div><div class="ttdoc">Signal class supporting registration and broadcasting to multiple listeners.</div><div class="ttdef"><b>Definition</b> signal.hpp:18</div></div>
+<div class="ttc" id="aclasscrabs_1_1Signal_html_a737ae8582314410719a85ba52e1a7a59"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html#a737ae8582314410719a85ba52e1a7a59">crabs::Signal::function_t</a></div><div class="ttdeci">std::function&lt; void(Args...)&gt; function_t</div><div class="ttdoc">Function type representing a listener.</div><div class="ttdef"><b>Definition</b> signal.hpp:20</div></div>
+<div class="ttc" id="aclasscrabs_1_1Signal_html_a75d108404187538f5dbc56bb176b63b5"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html#a75d108404187538f5dbc56bb176b63b5">crabs::Signal::emit</a></div><div class="ttdeci">void emit(Args... args) const</div><div class="ttdoc">Emits the signal to all registered listeners.</div><div class="ttdef"><b>Definition</b> signal.hpp:38</div></div>
+<div class="ttc" id="aclasscrabs_1_1Signal_html_ad2aa1b6447442adf20635c9b45b64e5c"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html#ad2aa1b6447442adf20635c9b45b64e5c">crabs::Signal::indexer_t</a></div><div class="ttdeci">Indexer&lt; function_t &gt; indexer_t</div><div class="ttdoc">Indexer type for managing the list of listeners.</div><div class="ttdef"><b>Definition</b> signal.hpp:24</div></div>
+<div class="ttc" id="aclasscrabs_1_1Signal_html_ae38180f3f65e6a9c01eb89e14af5bd7d"><div class="ttname"><a href="../../de/d25/classcrabs_1_1Signal.html#ae38180f3f65e6a9c01eb89e14af5bd7d">crabs::Signal::regFunc</a></div><div class="ttdeci">handle_t regFunc(function_t func)</div><div class="ttdoc">Registers a listener to the signal.</div><div class="ttdef"><b>Definition</b> signal.hpp:31</div></div>
 <div class="ttc" id="aindexer_8hpp_html"><div class="ttname"><a href="../../da/d13/indexer_8hpp.html">indexer.hpp</a></div><div class="ttdoc">Provides a generic indexer class for managing objects with handles and snapshot-based iterators.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

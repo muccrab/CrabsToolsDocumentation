@@ -93,63 +93,63 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <a href="../../dc/dd5/vector__functions_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef CRABS_ADITIONS_VECTOR_FUNCTIONS_HPP_</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define CRABS_ADITIONS_VECTOR_FUNCTIONS_HPP_</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef CRABS_ADITIONS_VECTOR_FUNCTIONS_HPP_</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define CRABS_ADITIONS_VECTOR_FUNCTIONS_HPP_</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>crabs{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> TTo, <span class="keyword">typename</span> TFrom, <span class="keyword">typename</span> TTranslator&gt;</div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dc/dd5/vector__functions_8hpp.html#ad2af308c9dcc462ecefd82e1d8e285f2">   23</a></span>std::vector&lt;TTo&gt; <a class="code hl_function" href="../../dc/dd5/vector__functions_8hpp.html#ad2af308c9dcc462ecefd82e1d8e285f2">mapVectors</a>(std::vector&lt;TFrom&gt; vector, TTranslator translator){</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::vector&lt;TTo&gt; result;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    result.reserve(vector.size());</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::transform(vector.begin(), vector.end(), std::back_inserter(result), translator);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>crabs{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> TTo, <span class="keyword">typename</span> TFrom, <span class="keyword">typename</span> TTranslator&gt;</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dc/dd5/vector__functions_8hpp.html#ad2af308c9dcc462ecefd82e1d8e285f2">   22</a></span>std::vector&lt;TTo&gt; <a class="code hl_function" href="../../dc/dd5/vector__functions_8hpp.html#ad2af308c9dcc462ecefd82e1d8e285f2">mapVectors</a>(std::vector&lt;TFrom&gt; vector, TTranslator translator){</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::vector&lt;TTo&gt; result;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    result.reserve(vector.size());</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::transform(vector.begin(), vector.end(), std::back_inserter(result), translator);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> TFrom, <span class="keyword">typename</span> TFilter&gt;</div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dc/dd5/vector__functions_8hpp.html#ac5e15ebbd03678383bab48eaad768f1e">   37</a></span>std::pair&lt;std::vector&lt;TFrom&gt;, std::vector&lt;TFrom&gt;&gt; <a class="code hl_function" href="../../dc/dd5/vector__functions_8hpp.html#ac5e15ebbd03678383bab48eaad768f1e">splitVectors</a>(std::vector&lt;TFrom&gt; vector, TFilter filter){</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::vector&lt;TFrom&gt; matched;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::vector&lt;TFrom&gt; unmatched;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    matched.reserve(vector.size());</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    unmatched.reserve(vector.size());</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; item : vector) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (filter(item)) matched.push_back(item);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">else</span> unmatched.push_back(item);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    matched.shrink_to_fit();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    unmatched.shrink_to_fit();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> {std::move(matched), std::move(unmatched)};</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> TFrom, <span class="keyword">typename</span> TFilter&gt;</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dc/dd5/vector__functions_8hpp.html#ac5e15ebbd03678383bab48eaad768f1e">   36</a></span>std::pair&lt;std::vector&lt;TFrom&gt;, std::vector&lt;TFrom&gt;&gt; <a class="code hl_function" href="../../dc/dd5/vector__functions_8hpp.html#ac5e15ebbd03678383bab48eaad768f1e">splitVectors</a>(std::vector&lt;TFrom&gt; vector, TFilter filter){</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::vector&lt;TFrom&gt; matched;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::vector&lt;TFrom&gt; unmatched;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    matched.reserve(vector.size());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    unmatched.reserve(vector.size());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; item : vector) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (filter(item)) matched.push_back(item);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">else</span> unmatched.push_back(item);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    matched.shrink_to_fit();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    unmatched.shrink_to_fit();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> {std::move(matched), std::move(unmatched)};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> TKey, <span class="keyword">typename</span> TValue&gt;</div>
-<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../dc/dd5/vector__functions_8hpp.html#aa08a2fb571d189b77ed39a8cffd7ffa3">   61</a></span>std::vector&lt;TKey&gt; <a class="code hl_function" href="../../dc/dd5/vector__functions_8hpp.html#aa08a2fb571d189b77ed39a8cffd7ffa3">extractKeys</a>(<span class="keyword">const</span> std::unordered_map&lt;TKey, TValue&gt;&amp; map) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::vector&lt;TKey&gt; keys = std::vector&lt;TKey&gt;();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    keys.reserve(map.size());</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pair : map){</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        keys.push_back(pair.first);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> keys;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> TKey, <span class="keyword">typename</span> TValue&gt;</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../dc/dd5/vector__functions_8hpp.html#aa08a2fb571d189b77ed39a8cffd7ffa3">   60</a></span>std::vector&lt;TKey&gt; <a class="code hl_function" href="../../dc/dd5/vector__functions_8hpp.html#aa08a2fb571d189b77ed39a8cffd7ffa3">extractKeys</a>(<span class="keyword">const</span> std::unordered_map&lt;TKey, TValue&gt;&amp; map) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::vector&lt;TKey&gt; keys = std::vector&lt;TKey&gt;();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    keys.reserve(map.size());</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pair : map){</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        keys.push_back(pair.first);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> keys;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
-</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="avector__functions_8hpp_html_aa08a2fb571d189b77ed39a8cffd7ffa3"><div class="ttname"><a href="../../dc/dd5/vector__functions_8hpp.html#aa08a2fb571d189b77ed39a8cffd7ffa3">crabs::extractKeys</a></div><div class="ttdeci">std::vector&lt; TKey &gt; extractKeys(const std::unordered_map&lt; TKey, TValue &gt; &amp;map)</div><div class="ttdoc">Extracts all keys from an unordered map.</div><div class="ttdef"><b>Definition</b> vector_functions.hpp:61</div></div>
-<div class="ttc" id="avector__functions_8hpp_html_ac5e15ebbd03678383bab48eaad768f1e"><div class="ttname"><a href="../../dc/dd5/vector__functions_8hpp.html#ac5e15ebbd03678383bab48eaad768f1e">crabs::splitVectors</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; TFrom &gt;, std::vector&lt; TFrom &gt; &gt; splitVectors(std::vector&lt; TFrom &gt; vector, TFilter filter)</div><div class="ttdoc">Splits a vector into two based on a filter function.</div><div class="ttdef"><b>Definition</b> vector_functions.hpp:37</div></div>
-<div class="ttc" id="avector__functions_8hpp_html_ad2af308c9dcc462ecefd82e1d8e285f2"><div class="ttname"><a href="../../dc/dd5/vector__functions_8hpp.html#ad2af308c9dcc462ecefd82e1d8e285f2">crabs::mapVectors</a></div><div class="ttdeci">std::vector&lt; TTo &gt; mapVectors(std::vector&lt; TFrom &gt; vector, TTranslator translator)</div><div class="ttdoc">Transforms a vector from one type to another using a translator function.</div><div class="ttdef"><b>Definition</b> vector_functions.hpp:23</div></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="avector__functions_8hpp_html_aa08a2fb571d189b77ed39a8cffd7ffa3"><div class="ttname"><a href="../../dc/dd5/vector__functions_8hpp.html#aa08a2fb571d189b77ed39a8cffd7ffa3">crabs::extractKeys</a></div><div class="ttdeci">std::vector&lt; TKey &gt; extractKeys(const std::unordered_map&lt; TKey, TValue &gt; &amp;map)</div><div class="ttdoc">Extracts all keys from an unordered map.</div><div class="ttdef"><b>Definition</b> vector_functions.hpp:60</div></div>
+<div class="ttc" id="avector__functions_8hpp_html_ac5e15ebbd03678383bab48eaad768f1e"><div class="ttname"><a href="../../dc/dd5/vector__functions_8hpp.html#ac5e15ebbd03678383bab48eaad768f1e">crabs::splitVectors</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; TFrom &gt;, std::vector&lt; TFrom &gt; &gt; splitVectors(std::vector&lt; TFrom &gt; vector, TFilter filter)</div><div class="ttdoc">Splits a vector into two based on a filter function.</div><div class="ttdef"><b>Definition</b> vector_functions.hpp:36</div></div>
+<div class="ttc" id="avector__functions_8hpp_html_ad2af308c9dcc462ecefd82e1d8e285f2"><div class="ttname"><a href="../../dc/dd5/vector__functions_8hpp.html#ad2af308c9dcc462ecefd82e1d8e285f2">crabs::mapVectors</a></div><div class="ttdeci">std::vector&lt; TTo &gt; mapVectors(std::vector&lt; TFrom &gt; vector, TTranslator translator)</div><div class="ttdoc">Transforms a vector from one type to another using a translator function.</div><div class="ttdef"><b>Definition</b> vector_functions.hpp:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

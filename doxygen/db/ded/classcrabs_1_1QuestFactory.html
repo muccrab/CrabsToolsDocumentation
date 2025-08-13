@@ -106,9 +106,8 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a31824ad656f98b7c5ad2bcc1e4fc17d0" id="r_a31824ad656f98b7c5ad2bcc1e4fc17d0"><td class="memItemLeft" align="right" valign="top"><a id="a31824ad656f98b7c5ad2bcc1e4fc17d0" name="a31824ad656f98b7c5ad2bcc1e4fc17d0"></a>
-static <a class="el" href="../../d2/da9/classcrabs_1_1Quest.html">Quest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>questFromSerializer</b> (<a class="el" href="../../d2/da9/classcrabs_1_1Quest.html">Quest</a> &amp;quest, const <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &amp;serializer)</td></tr>
-<tr class="memdesc:a31824ad656f98b7c5ad2bcc1e4fc17d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize and create a <a class="el" href="../../d2/da9/classcrabs_1_1Quest.html" title="Represents a quest consisting of multiple quest parts and manages their lifecycle.">Quest</a> from a serializer. <br /></td></tr>
+<tr class="memitem:a31824ad656f98b7c5ad2bcc1e4fc17d0" id="r_a31824ad656f98b7c5ad2bcc1e4fc17d0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/da9/classcrabs_1_1Quest.html">Quest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31824ad656f98b7c5ad2bcc1e4fc17d0">questFromSerializer</a> (<a class="el" href="../../d2/da9/classcrabs_1_1Quest.html">Quest</a> &amp;quest, const <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &amp;serializer)</td></tr>
+<tr class="memdesc:a31824ad656f98b7c5ad2bcc1e4fc17d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize and create a <a class="el" href="../../d2/da9/classcrabs_1_1Quest.html" title="Represents a quest consisting of multiple quest parts and manages their lifecycle.">Quest</a> from a serializer.  <br /></td></tr>
 <tr class="separator:a31824ad656f98b7c5ad2bcc1e4fc17d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07fad2e70ee47f8b526506ad048ce49f" id="r_a07fad2e70ee47f8b526506ad048ce49f"><td class="memTemplParams" colspan="2">template&lt;typename TTask &gt; </td></tr>
 <tr class="memitem:a07fad2e70ee47f8b526506ad048ce49f"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a07fad2e70ee47f8b526506ad048ce49f">registerTaskType</a> (const std::string &amp;type_name)</td></tr>
@@ -210,6 +209,12 @@ static std::unordered_map&lt; std::string, callback_ctor_t &gt;&#160;</td><td cl
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest deserialialization fails </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -278,6 +283,12 @@ static std::unordered_map&lt; std::string, callback_ctor_t &gt;&#160;</td><td cl
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Unique Pointer to a condition activator object </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest deserialialization fails </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -317,6 +328,12 @@ static std::unordered_map&lt; std::string, callback_ctor_t &gt;&#160;</td><td cl
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Unique Pointer to a condition check object </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest deserialialization fails </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -351,6 +368,12 @@ static std::unordered_map&lt; std::string, callback_ctor_t &gt;&#160;</td><td cl
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Unique Pointer to a condition check object </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest deserialialization fails </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -389,6 +412,49 @@ static std::unordered_map&lt; std::string, callback_ctor_t &gt;&#160;</td><td cl
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest deserialialization fails </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31824ad656f98b7c5ad2bcc1e4fc17d0" name="a31824ad656f98b7c5ad2bcc1e4fc17d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31824ad656f98b7c5ad2bcc1e4fc17d0">&#9670;&#160;</a></span>questFromSerializer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/da9/classcrabs_1_1Quest.html">Quest</a> &amp; QuestFactory::questFromSerializer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/da9/classcrabs_1_1Quest.html">Quest</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>quest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>serializer</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deserialize and create a <a class="el" href="../../d2/da9/classcrabs_1_1Quest.html" title="Represents a quest consisting of multiple quest parts and manages their lifecycle.">Quest</a> from a serializer. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest deserialialization fails </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -424,6 +490,12 @@ static std::unordered_map&lt; std::string, callback_ctor_t &gt;&#160;</td><td cl
   <table class="params">
     <tr><td class="paramname">quest</td><td><a class="el" href="../../d2/da9/classcrabs_1_1Quest.html" title="Represents a quest consisting of multiple quest parts and manages their lifecycle.">Quest</a> instance </td></tr>
     <tr><td class="paramname">serializer</td><td>Serialized <a class="el" href="../../d2/da9/classcrabs_1_1Quest.html" title="Represents a quest consisting of multiple quest parts and manages their lifecycle.">Quest</a> Part </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest deserialialization fails </td></tr>
   </table>
   </dd>
 </dl>
@@ -506,6 +578,12 @@ template&lt;typename TCallback &gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if callback type does not have a empty constructor </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -585,6 +663,12 @@ template&lt;typename TTask &gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if task type does not have a valid constructor (const <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task.">TaskInfo</a>&amp;) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -620,6 +704,12 @@ template&lt;typename TTask &gt; </div>
   <table class="params">
     <tr><td class="paramname">part</td><td><a class="el" href="../../d2/da9/classcrabs_1_1Quest.html" title="Represents a quest consisting of multiple quest parts and manages their lifecycle.">Quest</a> Part instance </td></tr>
     <tr><td class="paramname">serializer</td><td>Serialized <a class="el" href="../../d1/d22/classcrabs_1_1Task.html" title="Base class representing a quest task.">Task</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest deserialialization fails </td></tr>
   </table>
   </dd>
 </dl>

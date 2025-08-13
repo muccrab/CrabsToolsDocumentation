@@ -121,9 +121,6 @@ Classes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides a generic indexer class for managing objects with handles and snapshot-based iterators. </p>
-<dl class="section author"><dt>Author</dt><dd>Daniel Durica </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2025</dd></dl>
 <p>This header defines the <code><a class="el" href="../../db/dab/classcrabs_1_1Indexer.html" title="Generic container class for managing objects using handle-based access and snapshot iterators.">crabs::Indexer</a></code> template class, which manages a collection of objects of type <code>TType</code> using handles and supports efficient allocation and deallocation. The indexer provides snapshot-based iterators, meaning that iterators do not reflect changes to the underlying data after their creation.</p>
 <p>Main components:</p><ul>
 <li><code>Indexer&lt;TType&gt;</code>: Manages objects, supports creation and freeing of objects, and provides iterator access.</li>
@@ -134,8 +131,10 @@ Classes</h2></td></tr>
 <li>Iterators are snapshot-based; always create new iterators for each iteration.</li>
 <li>Handles are move-only and automatically release their resources when destroyed.</li>
 <li>The indexer uses versioning to ensure handles and iterators remain valid only for the lifetime of the objects.</li>
-<li>Thread safety is not guaranteed. </li>
+<li>Thread safety is not guaranteed.</li>
 </ul>
+<dl class="section author"><dt>Author</dt><dd>Daniel Durica </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025 </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -15,6 +15,7 @@ body, html {
     width: 100%;
     z-index: 1; /* Make sure it stays above other content */
     transition: position 0.3s ease, top 0.3s ease; /* Smooth transition for position change */
+    align-items: center;
 }
 
 /* When the panel becomes fixed */
@@ -28,14 +29,16 @@ body, html {
     position: relative;
     align-items: center;
     justify-content: center;
+    display: flex;
     flex: 0 1 auto; /* Ensure element width adjusts to content */
     margin: 0;
 }
 
 .panelelement img {
-    height: 100%;
     width: auto;
-    display: block; 
+    display: block;
+    width: 60px;
+    height: auto; 
 }
 
 .panelelement a {

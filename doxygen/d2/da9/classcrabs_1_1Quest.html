@@ -129,13 +129,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a539491dd261175e09ad5f6c7a96b9dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new quest part with a given name and condition check type.  <br /></td></tr>
 <tr class="separator:a539491dd261175e09ad5f6c7a96b9dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ef5c440f22097db8d61f547ecb612bb" id="r_a0ef5c440f22097db8d61f547ecb612bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ef5c440f22097db8d61f547ecb612bb">update</a> (const std::any &amp;data)</td></tr>
-<tr class="memdesc:a0ef5c440f22097db8d61f547ecb612bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update quest with arbitrary data.  <br /></td></tr>
+<tr class="memdesc:a0ef5c440f22097db8d61f547ecb612bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update quest (all quest parts that are active) with arbitrary data. and if all quest parts are finished, finishes the quest.  <br /></td></tr>
 <tr class="separator:a0ef5c440f22097db8d61f547ecb612bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648ad5238b937080e6e4909f46846560" id="r_a648ad5238b937080e6e4909f46846560"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a648ad5238b937080e6e4909f46846560">name</a> ()</td></tr>
 <tr class="memdesc:a648ad5238b937080e6e4909f46846560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get quest name.  <br /></td></tr>
 <tr class="separator:a648ad5238b937080e6e4909f46846560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bd23afb184b4073838b38889fe3f7b7" id="r_a7bd23afb184b4073838b38889fe3f7b7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/d13/classcrabs_1_1MultiIndexHandle.html">MultiIndexHandle</a>&lt; <a class="el" href="../../d2/da9/classcrabs_1_1Quest.html">Quest</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bd23afb184b4073838b38889fe3f7b7">handle</a> () const</td></tr>
-<tr class="memdesc:a7bd23afb184b4073838b38889fe3f7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get handle to this quest.  <br /></td></tr>
+<tr class="memdesc:a7bd23afb184b4073838b38889fe3f7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get MultiIndex handle to this quest with it's quest groups.  <br /></td></tr>
 <tr class="separator:a7bd23afb184b4073838b38889fe3f7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9ae56b312af2f9364631352bb7e9953" id="r_ab9ae56b312af2f9364631352bb7e9953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9ae56b312af2f9364631352bb7e9953">process</a> (<a class="el" href="../../dc/da1/classcrabs_1_1IQuestStrategy.html">IQuestStrategy</a> &amp;strategy)</td></tr>
 <tr class="memdesc:ab9ae56b312af2f9364631352bb7e9953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process quest using the given visitor strategy.  <br /></td></tr>
@@ -433,8 +433,14 @@ static <a class="el" href="../../db/d13/classcrabs_1_1QuestCallback.html">QuestC
       </table>
 </div><div class="memdoc">
 
-<p>Get handle to this quest. </p>
+<p>Get MultiIndex handle to this quest with it's quest groups. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant handle reference. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if quest does not have a system owner. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -668,7 +674,7 @@ static <a class="el" href="../../db/d13/classcrabs_1_1QuestCallback.html">QuestC
       </table>
 </div><div class="memdoc">
 
-<p>Update quest with arbitrary data. </p>
+<p>Update quest (all quest parts that are active) with arbitrary data. and if all quest parts are finished, finishes the quest. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Data to update quest state. </td></tr>

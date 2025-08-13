@@ -17,8 +17,8 @@
 
         <h3 class="alltext h3text">Core Classes</h3>
         <ul class="alltext list">
-            <li><strong>SaveSystem:</strong> This is the main interface for managing saves. It allows creating, loading, and deleting saves with minimal effort.</li>
-            <li><strong>Save:</strong> This class is used for managing a single save, Saving and loading specific files etc.</li>
+            <li><strong>SaveSystem:</strong> This is the main interface for managing saves. It allows creating, loading, and deleting saves.</li>
+            <li><strong>Save:</strong> This class is used for managing a single save, Saves are a collection of different json files that can be loaded/saved with the help of serializer interface.</li>
         </ul>
 
         <h3 class="alltext h3text">SaveSystem Constructor Options</h3>
@@ -32,7 +32,7 @@
             </li>
         </ul>
         <p class="alltext ptext">
-            [User-specific application data folder] resolves to <code>~/AppData/Local/...</code> on Windows and <code>~/.local/share/...</code> on Linux.
+            [User-specific application data folder] usually resolves to <code>~/AppData/Local/...</code> on Windows and <code>~/.local/share/...</code> on Linux.
         </p>
 
         <p class="alltext ptext">
@@ -43,6 +43,10 @@
         <p class="alltext ptext">
             Once a save is created via the system, it can be saved or loaded using the <code>ISerializer</code> interface. Although the current implementation uses JSON format, future versions might include compression or encoding to prevent casual tampering with save files.
         </p>
+
+        <div class="alltext linkblock">
+            <a class="alltext ptext" href="save_system_plans.html">Click here for future plans regarding the save system.</a>
+        </div>
     </div>
 
     <script src="top-panel-movement.js"></script>

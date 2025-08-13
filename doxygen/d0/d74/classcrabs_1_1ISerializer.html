@@ -114,23 +114,19 @@ Inheritance diagram for crabs::ISerializer:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a058c74fb3301cfca8e188c2e26986e19" id="r_a058c74fb3301cfca8e188c2e26986e19"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a058c74fb3301cfca8e188c2e26986e19">toSerializedString</a> (std::ostream &amp;stream) const =0</td></tr>
-<tr class="memdesc:a058c74fb3301cfca8e188c2e26986e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the current object to a stream.  <br /></td></tr>
+<tr class="memdesc:a058c74fb3301cfca8e188c2e26986e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the current object to a stream. This method can be overridden to implement user-specific serialization.  <br /></td></tr>
 <tr class="separator:a058c74fb3301cfca8e188c2e26986e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb53e9e8eab8c3e51c1d161d6f528341" id="r_abb53e9e8eab8c3e51c1d161d6f528341"><td class="memItemLeft" align="right" valign="top"><a id="abb53e9e8eab8c3e51c1d161d6f528341" name="abb53e9e8eab8c3e51c1d161d6f528341"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addValue</b> (const std::string &amp;name, const std::string &amp;<a class="el" href="../../db/d1c/serializer_8hpp.html#a81d507bd7efbfc024fba8ac620380ed0a2063c1608d6e0baf80249c42e2be5804">value</a>, <a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fc">ValueTypeEnum</a> type=<a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fcab45cffe084dd3d20d928bee85e7b0f21">ValueTypeEnum::string</a>)</td></tr>
-<tr class="memdesc:abb53e9e8eab8c3e51c1d161d6f528341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a scalar value to the serializer. <br /></td></tr>
+<tr class="memitem:abb53e9e8eab8c3e51c1d161d6f528341" id="r_abb53e9e8eab8c3e51c1d161d6f528341"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb53e9e8eab8c3e51c1d161d6f528341">addValue</a> (const std::string &amp;name, const std::string &amp;<a class="el" href="../../db/d1c/serializer_8hpp.html#a81d507bd7efbfc024fba8ac620380ed0a2063c1608d6e0baf80249c42e2be5804">value</a>, <a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fc">ValueTypeEnum</a> type=<a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fcab45cffe084dd3d20d928bee85e7b0f21">ValueTypeEnum::string</a>)</td></tr>
+<tr class="memdesc:abb53e9e8eab8c3e51c1d161d6f528341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a scalar value to the serializer.  <br /></td></tr>
 <tr class="separator:abb53e9e8eab8c3e51c1d161d6f528341"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a948e7588f9f94138d65afbdb418b99be" id="r_a948e7588f9f94138d65afbdb418b99be"><td class="memItemLeft" align="right" valign="top"><a id="a948e7588f9f94138d65afbdb418b99be" name="a948e7588f9f94138d65afbdb418b99be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addObject</b> (const std::string &amp;name, std::shared_ptr&lt; <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &gt; serialized_value)</td></tr>
-<tr class="memdesc:a948e7588f9f94138d65afbdb418b99be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an object to the serializer. <br /></td></tr>
+<tr class="memitem:a948e7588f9f94138d65afbdb418b99be" id="r_a948e7588f9f94138d65afbdb418b99be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a948e7588f9f94138d65afbdb418b99be">addObject</a> (const std::string &amp;name, std::shared_ptr&lt; <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &gt; serialized_value)</td></tr>
+<tr class="memdesc:a948e7588f9f94138d65afbdb418b99be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an object to the serializer.  <br /></td></tr>
 <tr class="separator:a948e7588f9f94138d65afbdb418b99be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a502aae21f952eb83dad82a89289fbc39" id="r_a502aae21f952eb83dad82a89289fbc39"><td class="memItemLeft" align="right" valign="top"><a id="a502aae21f952eb83dad82a89289fbc39" name="a502aae21f952eb83dad82a89289fbc39"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addArrayValues</b> (const std::string &amp;name, const std::vector&lt; std::string &gt; &amp;values, <a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fc">ValueTypeEnum</a> type=<a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fcab45cffe084dd3d20d928bee85e7b0f21">ValueTypeEnum::string</a>)</td></tr>
-<tr class="memdesc:a502aae21f952eb83dad82a89289fbc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an array of values to the serializer. <br /></td></tr>
+<tr class="memitem:a502aae21f952eb83dad82a89289fbc39" id="r_a502aae21f952eb83dad82a89289fbc39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a502aae21f952eb83dad82a89289fbc39">addArrayValues</a> (const std::string &amp;name, const std::vector&lt; std::string &gt; &amp;values, <a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fc">ValueTypeEnum</a> type=<a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fcab45cffe084dd3d20d928bee85e7b0f21">ValueTypeEnum::string</a>)</td></tr>
+<tr class="memdesc:a502aae21f952eb83dad82a89289fbc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an array of values to the serializer.  <br /></td></tr>
 <tr class="separator:a502aae21f952eb83dad82a89289fbc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2824e9068da9e0a1017751223653ab9f" id="r_a2824e9068da9e0a1017751223653ab9f"><td class="memItemLeft" align="right" valign="top"><a id="a2824e9068da9e0a1017751223653ab9f" name="a2824e9068da9e0a1017751223653ab9f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addArrayObjects</b> (const std::string &amp;name, std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &gt; &gt; &amp;&amp;values)</td></tr>
-<tr class="memdesc:a2824e9068da9e0a1017751223653ab9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an array of objects to the serializer. <br /></td></tr>
+<tr class="memitem:a2824e9068da9e0a1017751223653ab9f" id="r_a2824e9068da9e0a1017751223653ab9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2824e9068da9e0a1017751223653ab9f">addArrayObjects</a> (const std::string &amp;name, std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &gt; &gt; &amp;&amp;values)</td></tr>
+<tr class="memdesc:a2824e9068da9e0a1017751223653ab9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an array of objects to the serializer.  <br /></td></tr>
 <tr class="separator:a2824e9068da9e0a1017751223653ab9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2329f88eb7bf54e106e97062fb89c53" id="r_ae2329f88eb7bf54e106e97062fb89c53"><td class="memItemLeft" align="right" valign="top"><a id="ae2329f88eb7bf54e106e97062fb89c53" name="ae2329f88eb7bf54e106e97062fb89c53"></a>
 <a class="el" href="../../d5/d4f/classcrabs_1_1SerializerValue.html">SerializerValue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getValue</b> (const std::string &amp;name) const</td></tr>
@@ -187,6 +183,133 @@ std::vector&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d0
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface representing a serializable object. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2824e9068da9e0a1017751223653ab9f" name="a2824e9068da9e0a1017751223653ab9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2824e9068da9e0a1017751223653ab9f">&#9670;&#160;</a></span>addArrayObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISerializer::addArrayObjects </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &gt; &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an array of objects to the serializer. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">crabs:SerializerException</td><td>if element already exists </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a502aae21f952eb83dad82a89289fbc39" name="a502aae21f952eb83dad82a89289fbc39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a502aae21f952eb83dad82a89289fbc39">&#9670;&#160;</a></span>addArrayValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISerializer::addArrayValues </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fc">ValueTypeEnum</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fcab45cffe084dd3d20d928bee85e7b0f21">ValueTypeEnum::string</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an array of values to the serializer. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">crabs:SerializerException</td><td>if element already exists </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a948e7588f9f94138d65afbdb418b99be" name="a948e7588f9f94138d65afbdb418b99be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948e7588f9f94138d65afbdb418b99be">&#9670;&#160;</a></span>addObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISerializer::addObject </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>serialized_value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an object to the serializer. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">crabs:SerializerException</td><td>if element already exists </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb53e9e8eab8c3e51c1d161d6f528341" name="abb53e9e8eab8c3e51c1d161d6f528341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb53e9e8eab8c3e51c1d161d6f528341">&#9670;&#160;</a></span>addValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISerializer::addValue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fc">ValueTypeEnum</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fcab45cffe084dd3d20d928bee85e7b0f21">ValueTypeEnum::string</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a scalar value to the serializer. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">crabs:SerializerException</td><td>if element already exists <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a058c74fb3301cfca8e188c2e26986e19" name="a058c74fb3301cfca8e188c2e26986e19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a058c74fb3301cfca8e188c2e26986e19">&#9670;&#160;</a></span>toSerializedString()</h2>
 
@@ -210,7 +333,7 @@ std::vector&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d0
 </table>
 </div><div class="memdoc">
 
-<p>Serialize the current object to a stream. </p>
+<p>Serialize the current object to a stream. This method can be overridden to implement user-specific serialization. </p>
 
 <p>Implemented in <a class="el" href="../../d6/da8/classcrabs_1_1JSONSerializer.html#a27bd793552a05d6b98459c1fa93839e0">crabs::JSONSerializer</a>.</p>
 

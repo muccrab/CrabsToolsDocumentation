@@ -54,13 +54,14 @@ var searchData=
   ['connecttrigger_51',['connectTrigger',['../d6/d3d/classDialogueCPP.html#af947278cc7ee4740b42eae95e7d03aec',1,'DialogueCPP']]],
   ['constants_2ehpp_52',['constants.hpp',['../dc/db8/external_2dialogue__system_2include_2constants_8hpp.html',1,'(Global Namespace)'],['../dc/d41/external_2quest__system_2include_2constants_8hpp.html',1,'(Global Namespace)'],['../d0/dac/external_2save__system_2include_2constants_8hpp.html',1,'(Global Namespace)'],['../df/d24/include_2quest__system__godot_2constants_8hpp.html',1,'(Global Namespace)']]],
   ['continue_5fexecution_53',['continue_execution',['../de/d70/structcrabs_1_1DialogueInterpreterFlags.html#aff48d1c8cd5da61901c5b097135225f6',1,'crabs::DialogueInterpreterFlags']]],
-  ['create_54',['create',['../d8/d2d/classQIFTaskFactory.html#aa07629d103de7c96da91f8081afb0d92',1,'QIFTaskFactory']]],
-  ['createcardauto_55',['createCardAuto',['../d2/d1f/card__factory_8hpp.html#ad9e58f8fbec91ff0a2d267776b176cee',1,'crabs']]],
-  ['createfullpath_56',['createFullPath',['../d0/d4b/classcrabs_1_1Save.html#a160c1e2e3722d7d0726789246354468d',1,'crabs::Save']]],
-  ['createinstance_57',['createInstance',['../d4/d92/classcrabs_1_1DialogueInterpreter.html#a42e4b26a0a80034590e642cd18fec432',1,'crabs::DialogueInterpreter']]],
-  ['createmultipliercard_58',['createMultiplierCard',['../d2/d1f/card__factory_8hpp.html#a1bb88fd41425264a8175a531a95bf8b7',1,'crabs']]],
-  ['createnormalcard_59',['createNormalCard',['../d2/d1f/card__factory_8hpp.html#af543097de319ddb095b66db2b0538960',1,'crabs']]],
-  ['createoroverwritesave_60',['createOrOverwriteSave',['../d0/d4b/classcrabs_1_1Save.html#aa03fe3870098a329a601c7e55663ef95',1,'crabs::Save']]],
-  ['createsamerankcard_61',['createSameRankCard',['../d2/d1f/card__factory_8hpp.html#a80b3d9daa51e82b43dd325bc99b9157c',1,'crabs']]],
-  ['createsave_62',['createSave',['../dd/d99/classcrabs_1_1SaveSystem.html#a1bee534344213d63105bb430a508a177',1,'crabs::SaveSystem']]]
+  ['crabs_20game_20development_20tools_20technical_20information_54',['Crabs Game Development Tools Technical Information',['../index.html',1,'']]],
+  ['create_55',['create',['../d8/d2d/classQIFTaskFactory.html#aa07629d103de7c96da91f8081afb0d92',1,'QIFTaskFactory']]],
+  ['createcardauto_56',['createCardAuto',['../d2/d1f/card__factory_8hpp.html#ad9e58f8fbec91ff0a2d267776b176cee',1,'crabs']]],
+  ['createfullpath_57',['createFullPath',['../d0/d4b/classcrabs_1_1Save.html#a160c1e2e3722d7d0726789246354468d',1,'crabs::Save']]],
+  ['createinstance_58',['createInstance',['../d4/d92/classcrabs_1_1DialogueInterpreter.html#a42e4b26a0a80034590e642cd18fec432',1,'crabs::DialogueInterpreter']]],
+  ['createmultipliercard_59',['createMultiplierCard',['../d2/d1f/card__factory_8hpp.html#a1bb88fd41425264a8175a531a95bf8b7',1,'crabs']]],
+  ['createnormalcard_60',['createNormalCard',['../d2/d1f/card__factory_8hpp.html#af543097de319ddb095b66db2b0538960',1,'crabs']]],
+  ['createoroverwritesave_61',['createOrOverwriteSave',['../d0/d4b/classcrabs_1_1Save.html#aa03fe3870098a329a601c7e55663ef95',1,'crabs::Save']]],
+  ['createsamerankcard_62',['createSameRankCard',['../d2/d1f/card__factory_8hpp.html#a80b3d9daa51e82b43dd325bc99b9157c',1,'crabs']]],
+  ['createsave_63',['createSave',['../dd/d99/classcrabs_1_1SaveSystem.html#a1bee534344213d63105bb430a508a177',1,'crabs::SaveSystem']]]
 ];
