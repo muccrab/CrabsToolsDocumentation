@@ -8,8 +8,8 @@ var searchData=
   ['noncopyablestring_5',['NonCopyableString',['../dd/d44/classNonCopyableString.html',1,'']]],
   ['none_6',['none',['../db/d1c/serializer_8hpp.html#a81d507bd7efbfc024fba8ac620380ed0a334c4a4c42fdb79d7ebc3e73b517e6f8',1,'crabs']]],
   ['notify_7',['notify',['../da/d6a/classcrabs_1_1IActor.html#a60e7fb5a35ff685a3d96a414e3fa6d61',1,'crabs::IActor::notify()'],['../d5/d3c/classcrabs_1_1IPlayerNotifyer.html#a365c02fc85636071df5ab4cdf1e4e742',1,'crabs::IPlayerNotifyer::notify()'],['../d4/dcd/classcrabs_1_1PlayerActor.html#a235a1f6b9e043bc1c5c8d8e6956527d9',1,'crabs::PlayerActor::notify()'],['../df/dcb/classBattleNotifyer.html#adac81006c662ad0781bc3ae773e2eeea',1,'BattleNotifyer::notify()']]],
-  ['null_8',['Null',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabeabbb93ef26e3c101ff11cdd21cab08a94',1,'Nullcrabs'],['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabeabbb93ef26e3c101ff11cdd21cab08a94',1,'Nullcrabs']]],
+  ['null_8',['Null',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabeabbb93ef26e3c101ff11cdd21cab08a94',1,'crabs']]],
   ['null_9',['null',['../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fca37a6259cc0c1dae299a7866489dff0bd',1,'crabs']]],
-  ['number_10',['Number',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabeab2ee912b91d69b435159c7c3f6df7f5f',1,'Numbercrabs'],['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabeab2ee912b91d69b435159c7c3f6df7f5f',1,'Numbercrabs']]],
+  ['number_10',['Number',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabeab2ee912b91d69b435159c7c3f6df7f5f',1,'crabs']]],
   ['number_11',['number',['../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fcab1bc248a7ff2b2e95569f56de68615df',1,'crabs']]]
 ];

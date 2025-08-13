@@ -113,8 +113,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad1e042b39a31f1789fefb08a4e7dd3c4" id="r_ad1e042b39a31f1789fefb08a4e7dd3c4"><td class="memItemLeft" align="right" valign="top">Dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e042b39a31f1789fefb08a4e7dd3c4">result</a> () const</td></tr>
 <tr class="memdesc:ad1e042b39a31f1789fefb08a4e7dd3c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the serialized result.  <br /></td></tr>
 <tr class="separator:ad1e042b39a31f1789fefb08a4e7dd3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88c2f568cd4f0f5c9ad45119294cd1f" id="r_ac88c2f568cd4f0f5c9ad45119294cd1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac88c2f568cd4f0f5c9ad45119294cd1f">processObject</a> (const std::string &amp;name, const <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">crabs::ISerializer</a> &amp;object) override</td></tr>
+<tr class="memdesc:ac88c2f568cd4f0f5c9ad45119294cd1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a serializable object.  <br /></td></tr>
+<tr class="separator:ac88c2f568cd4f0f5c9ad45119294cd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa77119346d93e8e04da85e665eb3802" id="r_afa77119346d93e8e04da85e665eb3802"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa77119346d93e8e04da85e665eb3802">processValue</a> (const std::string &amp;name, const <a class="el" href="../../d5/d4f/classcrabs_1_1SerializerValue.html">crabs::SerializerValue</a> &amp;value) override</td></tr>
-<tr class="memdesc:afa77119346d93e8e04da85e665eb3802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a serializable object.  <br /></td></tr>
+<tr class="memdesc:afa77119346d93e8e04da85e665eb3802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a primitive value.  <br /></td></tr>
 <tr class="separator:afa77119346d93e8e04da85e665eb3802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c7fec16218f702023de3c0d41d11978" id="r_a2c7fec16218f702023de3c0d41d11978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c7fec16218f702023de3c0d41d11978">processArrayValues</a> (const std::string &amp;name, const std::vector&lt; <a class="el" href="../../d5/d4f/classcrabs_1_1SerializerValue.html">crabs::SerializerValue</a> &gt; &amp;values) override</td></tr>
 <tr class="memdesc:a2c7fec16218f702023de3c0d41d11978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process an array of primitive values.  <br /></td></tr>
@@ -127,9 +130,6 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ISerializerStrategy</b> ()=default</td></tr>
 <tr class="memdesc:aa83e92cf9f55f4a1d7180a4c8d50ba18 inherit pub_methods_classcrabs_1_1ISerializerStrategy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Viratual Destructor. <br /></td></tr>
 <tr class="separator:aa83e92cf9f55f4a1d7180a4c8d50ba18 inherit pub_methods_classcrabs_1_1ISerializerStrategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb426461f7be336c0f6fb3beeac0aefe inherit pub_methods_classcrabs_1_1ISerializerStrategy" id="r_acb426461f7be336c0f6fb3beeac0aefe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dfb/classcrabs_1_1ISerializerStrategy.html#acb426461f7be336c0f6fb3beeac0aefe">processObject</a> (const std::string &amp;name, const <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">ISerializer</a> &amp;<a class="el" href="../../db/d1c/serializer_8hpp.html#a81d507bd7efbfc024fba8ac620380ed0aa8cfde6331bd59eb2ac96f8911c4b666">object</a>)=0</td></tr>
-<tr class="memdesc:acb426461f7be336c0f6fb3beeac0aefe inherit pub_methods_classcrabs_1_1ISerializerStrategy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process saved object.  <br /></td></tr>
-<tr class="separator:acb426461f7be336c0f6fb3beeac0aefe inherit pub_methods_classcrabs_1_1ISerializerStrategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -261,6 +261,46 @@ Dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>m_result</b></t
 
 </div>
 </div>
+<a id="ac88c2f568cd4f0f5c9ad45119294cd1f" name="ac88c2f568cd4f0f5c9ad45119294cd1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88c2f568cd4f0f5c9ad45119294cd1f">&#9670;&#160;</a></span>processObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SerializerToDictionary::processObject </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/d74/classcrabs_1_1ISerializer.html">crabs::ISerializer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Process a serializable object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Object name. </td></tr>
+    <tr><td class="paramname">object</td><td>Serializable object reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../dd/dfb/classcrabs_1_1ISerializerStrategy.html#acb426461f7be336c0f6fb3beeac0aefe">crabs::ISerializerStrategy</a>.</p>
+
+</div>
+</div>
 <a id="afa77119346d93e8e04da85e665eb3802" name="afa77119346d93e8e04da85e665eb3802"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa77119346d93e8e04da85e665eb3802">&#9670;&#160;</a></span>processValue()</h2>
 
@@ -288,15 +328,8 @@ Dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>m_result</b></t
 </table>
 </div><div class="memdoc">
 
-<p>Process a serializable object. </p>
+<p>Process a primitive value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Object name. </td></tr>
-    <tr><td class="paramname">object</td><td>Serializable object reference.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Process a primitive value. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Value name. </td></tr>
     <tr><td class="paramname">value</td><td>Serializer value. </td></tr>

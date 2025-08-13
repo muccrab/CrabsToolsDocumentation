@@ -267,7 +267,7 @@ std::unique_ptr&lt; <a class="el" href="../../d1/d8e/classcrabs_1_1RandomBattlef
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Status as Godot String. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Status as Godot String. A - Attacking, F - Is Attacked, D - In deck, H - In hand, I - Played, P - Placed </dd></dl>
 
 </div>
 </div>
@@ -287,7 +287,7 @@ std::unique_ptr&lt; <a class="el" href="../../d1/d8e/classcrabs_1_1RandomBattlef
 </div><div class="memdoc">
 
 <p>Gets the size of the enemy player's hand. </p>
-<dl class="section return"><dt>Returns</dt><dd>Number of cards in the enemy hand. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of cards in the enemy hand. Returns -1 if error occurs </dd></dl>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ std::unique_ptr&lt; <a class="el" href="../../d1/d8e/classcrabs_1_1RandomBattlef
 </div><div class="memdoc">
 
 <p>Gets the current turn number. </p>
-<dl class="section return"><dt>Returns</dt><dd>The turn count as an integer. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The turn count as an integer [0, 1], returns 2 in terms of failure </dd></dl>
 
 </div>
 </div>

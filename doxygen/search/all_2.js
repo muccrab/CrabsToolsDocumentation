@@ -16,7 +16,7 @@ var searchData=
   ['battlelogger_13',['BattleLogger',['../d9/d05/classBattleLogger.html',1,'']]],
   ['battlemove_14',['BattleMove',['../d6/dea/structcrabs_1_1BattleMove.html',1,'crabs']]],
   ['battlenotifyer_15',['BattleNotifyer',['../df/dcb/classBattleNotifyer.html',1,'']]],
-  ['boolean_16',['Boolean',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabea27226c864bac7454a8504f8edb15d95b',1,'Booleancrabs'],['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabea27226c864bac7454a8504f8edb15d95b',1,'Booleancrabs']]],
+  ['boolean_16',['Boolean',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabea27226c864bac7454a8504f8edb15d95b',1,'crabs']]],
   ['boolean_17',['boolean',['../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fca84e2c64f38f78ba3ea5c905ab5a2da27',1,'crabs']]],
   ['branchinfo_18',['BranchInfo',['../de/d65/structcrabs_1_1BranchInfo.html',1,'crabs']]]
 ];

@@ -111,7 +111,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a31824ad656f98b7c5ad2bcc1e4fc17d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07fad2e70ee47f8b526506ad048ce49f" id="r_a07fad2e70ee47f8b526506ad048ce49f"><td class="memTemplParams" colspan="2">template&lt;typename TTask &gt; </td></tr>
 <tr class="memitem:a07fad2e70ee47f8b526506ad048ce49f"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a07fad2e70ee47f8b526506ad048ce49f">registerTaskType</a> (const std::string &amp;type_name)</td></tr>
-<tr class="memdesc:a07fad2e70ee47f8b526506ad048ce49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a task type by name with automatic constructor taking <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task.">TaskInfo</a>.  <br /></td></tr>
+<tr class="memdesc:a07fad2e70ee47f8b526506ad048ce49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a task type by name with automatic constructor taking <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task. Used in the constructor of the task.">TaskInfo</a>.  <br /></td></tr>
 <tr class="separator:a07fad2e70ee47f8b526506ad048ce49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0479a03a604c8176c7537d66db7f1940" id="r_a0479a03a604c8176c7537d66db7f1940"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0479a03a604c8176c7537d66db7f1940">registerTaskFactory</a> (const std::string &amp;type_name, constructor_t constructor)</td></tr>
 <tr class="memdesc:a0479a03a604c8176c7537d66db7f1940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a task factory function manually.  <br /></td></tr>
@@ -618,7 +618,7 @@ template&lt;typename TCallback &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type_name</td><td>The string identifier of the task type. </td></tr>
-    <tr><td class="paramname">constructor</td><td>Factory function creating a <a class="el" href="../../d1/d22/classcrabs_1_1Task.html" title="Base class representing a quest task.">Task</a> from <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task.">TaskInfo</a>. </td></tr>
+    <tr><td class="paramname">constructor</td><td>Factory function creating a <a class="el" href="../../d1/d22/classcrabs_1_1Task.html" title="Base class representing a quest task.">Task</a> from <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task. Used in the constructor of the task.">TaskInfo</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -650,7 +650,7 @@ template&lt;typename TTask &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Register a task type by name with automatic constructor taking <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task.">TaskInfo</a>. </p>
+<p>Register a task type by name with automatic constructor taking <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task. Used in the constructor of the task.">TaskInfo</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">TTask</td><td>The task type to register. </td></tr>
@@ -665,7 +665,7 @@ template&lt;typename TTask &gt; </div>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if task type does not have a valid constructor (const <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task.">TaskInfo</a>&amp;) </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>if task type does not have a valid constructor (const <a class="el" href="../../d5/d0b/structcrabs_1_1TaskInfo.html" title="Basic information for a task. Used in the constructor of the task.">TaskInfo</a>&amp;) </td></tr>
   </table>
   </dd>
 </dl>

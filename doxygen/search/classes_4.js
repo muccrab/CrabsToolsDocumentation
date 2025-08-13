@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['euler_5fdelta_5fvec2_5ffunctor_0',['euler_delta_vec2_functor',['../d9/de6/classdata__formats_1_1euler__delta__vec2__functor.html',1,'data_formats']]]
+  ['gdcallback_0',['GDCallback',['../df/da1/classGDCallback.html',1,'']]],
+  ['gdcallbackcpp_1',['GDCallbackCPP',['../d4/d37/classGDCallbackCPP.html',1,'']]],
+  ['gdtask_2',['GDTask',['../d3/d6c/classGDTask.html',1,'']]],
+  ['gdtaskcpp_3',['GDTaskCPP',['../d8/dfe/classGDTaskCPP.html',1,'']]]
 ];

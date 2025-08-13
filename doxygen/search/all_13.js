@@ -51,7 +51,7 @@ var searchData=
   ['stackentry_48',['StackEntry',['../d1/d52/structcrabs_1_1StackEntry.html',1,'crabs']]],
   ['stackenviroment_49',['StackEnviroment',['../d7/dbe/structcrabs_1_1StackEnviroment.html',1,'crabs']]],
   ['state_50',['state',['../d1/d6e/classcrabs_1_1Card.html#a39e2891f59675a131aa11000803e89b6',1,'crabs::Card']]],
-  ['string_51',['String',['../dc/dea/deserializer_8hpp.html#a1f6139003b0726157ea6561fdafae705a27118326006d3829667a400ad23d5d98',1,'Stringcrabs'],['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabea27118326006d3829667a400ad23d5d98',1,'Stringcrabs'],['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabea27118326006d3829667a400ad23d5d98',1,'Stringcrabs']]],
+  ['string_51',['String',['../dc/dea/deserializer_8hpp.html#a1f6139003b0726157ea6561fdafae705a27118326006d3829667a400ad23d5d98',1,'Stringcrabs'],['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabea27118326006d3829667a400ad23d5d98',1,'Stringcrabs']]],
   ['string_52',['string',['../db/d1c/serializer_8hpp.html#ac7192f11e0021127bcd10cd0399d02fcab45cffe084dd3d20d928bee85e7b0f21',1,'crabs']]],
   ['string_5ffunctions_2ehpp_53',['string_functions.hpp',['../da/da5/string__functions_8hpp.html',1,'']]],
   ['suit_54',['suit',['../d1/d6e/classcrabs_1_1Card.html#ab788a8f185730c71056edfa964cd359b',1,'crabs::Card']]],

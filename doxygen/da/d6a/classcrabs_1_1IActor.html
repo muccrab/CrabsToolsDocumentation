@@ -130,10 +130,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>newTurn</b> ()</td></
 <tr class="memdesc:a4d3bfc9e621d2e2660368701f9a3524e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at the start of a new turn to refill the actor's hand. <br /></td></tr>
 <tr class="separator:a4d3bfc9e621d2e2660368701f9a3524e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3a4f06c2afceb0df8b0bf99cfe90f9e" id="r_ad3a4f06c2afceb0df8b0bf99cfe90f9e"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; <a class="el" href="../../d6/dea/structcrabs_1_1BattleMove.html">BattleMove</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3a4f06c2afceb0df8b0bf99cfe90f9e">playNext</a> (const <a class="el" href="../../de/d61/classcrabs_1_1BattleField.html">BattleField</a> &amp;field)=0</td></tr>
-<tr class="memdesc:ad3a4f06c2afceb0df8b0bf99cfe90f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the next move based on the current battlefield state.  <br /></td></tr>
+<tr class="memdesc:ad3a4f06c2afceb0df8b0bf99cfe90f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the next move based on the current battlefield state.  <br /></td></tr>
 <tr class="separator:ad3a4f06c2afceb0df8b0bf99cfe90f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae5d068877d698cfbd64c4609d4df1ae" id="r_aae5d068877d698cfbd64c4609d4df1ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae5d068877d698cfbd64c4609d4df1ae">okCard</a> (size_t card_index)</td></tr>
-<tr class="memdesc:aae5d068877d698cfbd64c4609d4df1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark a card as used or "ok" by playing it from the deck.  <br /></td></tr>
+<tr class="memdesc:aae5d068877d698cfbd64c4609d4df1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by battlefield to confirm the move and play it from the deck.  <br /></td></tr>
 <tr class="separator:aae5d068877d698cfbd64c4609d4df1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c5903594505fd4e54d78c40ccecd8dd" id="r_a2c5903594505fd4e54d78c40ccecd8dd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../df/d6f/classcrabs_1_1Deck.html">Deck</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c5903594505fd4e54d78c40ccecd8dd">deck</a> () const</td></tr>
 <tr class="memdesc:a2c5903594505fd4e54d78c40ccecd8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the actor's deck.  <br /></td></tr>
@@ -387,7 +387,7 @@ std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>
 </table>
 </div><div class="memdoc">
 
-<p>Mark a card as used or "ok" by playing it from the deck. </p>
+<p>Used by battlefield to confirm the move and play it from the deck. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">card_index</td><td>Index of the card in the hand to play. </td></tr>
@@ -420,7 +420,7 @@ std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>
 </table>
 </div><div class="memdoc">
 
-<p>Plays the next move based on the current battlefield state. </p>
+<p>Provides the next move based on the current battlefield state. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">field</td><td>Reference to the battlefield. </td></tr>

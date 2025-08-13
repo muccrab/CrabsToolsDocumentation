@@ -16,7 +16,7 @@ var searchData=
   ['json_5ftrue_13',['JSON_TRUE',['../d6/dc1/json__constants_8hpp.html#abf0b6655c62f6f75bb0300f605cba136',1,'crabs']]],
   ['jsondeserializer_14',['JSONDeserializer',['../d0/dba/classcrabs_1_1JSONDeserializer.html',1,'crabs']]],
   ['jsonentry_15',['JSONEntry',['../df/d32/structcrabs_1_1JSONEntry.html',1,'crabs']]],
-  ['jsonentrytypeenum_16',['JSONEntryTypeEnum',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabe',1,'crabs::JSONEntryTypeEnum'],['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabe',1,'crabs::JSONEntryTypeEnum']]],
+  ['jsonentrytypeenum_16',['JSONEntryTypeEnum',['../dc/dea/deserializer_8hpp.html#a00dce1f1e14eb5406cac75247576cabe',1,'crabs']]],
   ['jsonserializer_17',['JSONSerializer',['../d6/da8/classcrabs_1_1JSONSerializer.html',1,'crabs']]],
   ['jsonstacklanguageenum_18',['JSONStackLanguageEnum',['../dc/dea/deserializer_8hpp.html#a1f6139003b0726157ea6561fdafae705',1,'crabs']]]
 ];
